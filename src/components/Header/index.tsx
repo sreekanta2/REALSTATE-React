@@ -1,12 +1,13 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import arrowDownImage from "../../../public/image/img_arrow_down.svg";
+import logo from "../../../public/image/img_real_estate_1.svg";
 import { CloseSVG } from "../../assets/images";
 import { Button } from "../Button";
 import { Heading } from "../Heading";
 import { Img } from "../Img/Img";
-import { Text } from "../Text";
 import { Input } from "../Input";
-import logo from "../../../public/image/img_real_estate_1.svg";
-import arrowDownImage from "../../../public/image/img_arrow_down.svg";
+import { Text } from "../Text";
 
 interface Props {
   className?: string;
@@ -18,7 +19,11 @@ export default function Header({ ...props }: Props) {
       <div className="flex flex-row md:flex-col  justify-between items-center w-full mx-auto md:gap-10 sm:px-5 md:px-0 max-w-[1200px]">
         {/* logo */}
         <div className="flex flex-row justify-start items-start gap-[11px]">
-          <Img src={logo} alt="realestateone" className="h-[40px] w-[40px]" />
+          <Link to="">
+            {" "}
+            <Img src={logo} alt="realestateone" className="h-[40px] w-[40px]" />
+          </Link>
+
           <Text
             size="lg"
             as="p"
@@ -32,7 +37,7 @@ export default function Header({ ...props }: Props) {
           <div className="flex flex-row w-full flex-wrap sm:w-full justify-center gap-10">
             <div className="flex flex-row justify-start items-start   gap-1.5">
               <Heading as="h6" className="text-base font-semibold">
-                Home
+                <Link to="/">Home</Link>
               </Heading>
               <Img
                 src={arrowDownImage}
@@ -40,19 +45,9 @@ export default function Header({ ...props }: Props) {
                 className="h-[16px] w-[16px] mt-0.5"
               />
             </div>
-            <div className="flex flex-row justify-start items-start  gap-1.5">
-              <Heading as="h6" className="text-base font-semibold">
-                Listing
-              </Heading>
-              <Img
-                src={arrowDownImage}
-                alt="arrowdown_one"
-                className="h-[16px] w-[16px]"
-              />
-            </div>
             <div className="flex flex-row justify-start items-start gap-1.5">
               <Heading as="h6" className="text-base font-semibold">
-                Agents
+                <Link to="/agentlist">Agents</Link>
               </Heading>
               <Img
                 src={arrowDownImage}
@@ -62,12 +57,12 @@ export default function Header({ ...props }: Props) {
             </div>
             <div className="flex flex-row justify-start items-start  gap-1.5">
               <Heading as="h6" className="text-base font-semibold">
-                Property
+                <Link to="/property">Property</Link>
               </Heading>
             </div>{" "}
             <div className="flex flex-row justify-start items-start  gap-1.5">
               <Heading as="h6" className="text-base font-semibold">
-                Blog
+                <Link to="/blogpage">Blog</Link>
               </Heading>
             </div>
           </div>
@@ -100,13 +95,15 @@ export default function Header({ ...props }: Props) {
             }
             className="w-[55%] gap-2 text-gray-908 font-bold"
           />
-          <Button
-            size="lg"
-            shape="round"
-            className="sm:px-5 font-semibold min-w-[94px]"
-          >
-            Log in
-          </Button>
+          <Link to="/login">
+            <Button
+              size="lg"
+              shape="round"
+              className="sm:px-5 font-semibold min-w-[94px]"
+            >
+              Log in
+            </Button>
+          </Link>
         </div>
       </div>
     </header>

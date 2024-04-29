@@ -10,16 +10,26 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@googlemaps/react-wrapper": "^1.1.35",
+    "@material-tailwind/react": "^2.1.9",
+    "@tanstack/react-table": "^8.16.0",
+    "@types/googlemaps": "^3.43.3",
+    "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
+    "react-modal": "^3.16.1",
+    "react-rating-stars-component": "^2.2.0",
     "react-router-dom": "^6.22.3",
-    "react-tabs": "^6.0.2"
+    "react-select": "^5.8.0",
+    "react-tabs": "^6.0.2",
+    "swiper": "^11.1.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
     "@types/react-helmet": "^6.1.11",
+    "@types/react-modal": "^3.16.3",
     "@typescript-eslint/eslint-plugin": "^7.2.0",
     "@typescript-eslint/parser": "^7.2.0",
     "@vitejs/plugin-react": "^4.2.1",

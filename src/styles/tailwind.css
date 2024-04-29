@@ -55,7 +55,3 @@ select:focus {
 li:focus-visible {
   outline: none;
 }
-
-:hover {
-  cursor: pointer;
-}

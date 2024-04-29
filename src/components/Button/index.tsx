@@ -27,7 +27,7 @@ const sizes = {
   "3x1": "h-[60px] px-3.5",
   md: "h-[36px] px-3.5 text-sm",
   lg: "h-[44px] px-4 text-base",
-  "4x1": "h-[68px] px-[35px] text-lg",
+  "4xl": "h-[68px] px-[35px] text-lg",
   xl: "h-[48px] px-6 text-base",
 } as const;
 type ButtonProps = Omit<

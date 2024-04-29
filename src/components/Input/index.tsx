@@ -59,14 +59,14 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
     ref
   ) => {
     const handleChange: React.ChangeEventHandler<HTMLInputElement> = (e) => {
-      if (onChange) onChange(e?.target?.value);
+      if (onChange) onChange(e);
     };
     return (
       <>
         <div
-          className={` ${className} flex items-center justify-center ${
-            (size && sizes[size as keyof typeof sizes]) || ""
-          } ${
+          className={` ${className} flex items-center justify-center  ${
+            (shape && shapes[shape as keyof typeof shapes]) || ""
+          } ${(size && sizes[size as keyof typeof sizes]) || ""} ${
             variants[variant]?.[
               color as keyof (typeof variants)[typeof variant]
             ] ||

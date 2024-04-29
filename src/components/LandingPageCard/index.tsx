@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Button } from "../Button";
 import { Img } from "../Img/Img";
 import { Text } from "../Text";
@@ -12,6 +13,7 @@ interface Props {
   p1bath?: string;
   viewDetails?: string;
   price?: string;
+  id?: number;
 }
 export default function LandingPageCard({
   imageOne = "../../../public/image/img_image_260x384.png",
@@ -22,6 +24,7 @@ export default function LandingPageCard({
   p1bath = "Family",
   viewDetails = "View Details",
   price = "$649,900",
+  id = 1,
   ...props
 }: Props) {
   return (
@@ -31,7 +34,7 @@ export default function LandingPageCard({
         alt="image_one"
         className="w-full md:h-auto sm:w-full rounded-tr-[10px] rounded-tl-[10px] object-cover"
       />
-      <div className="flex flex-row justify-center w-full p-[19px] rounded-bl-[10px] rounded-br-[10px] border-red-100_01 border border-solid bg-gray-50_1">
+      <div className="flex flex-row justify-center w-full p-[19px] rounded-bl-[10px] rounded-br-[10px]  border border-solid bg-gray-50_1">
         <div className="flex flex-col items-center justify-start w-full gap-[25px] my-2.5 md:px-5 max-w-[344px]">
           <div className="flex flex-row justify-start items-center w-full gap-3">
             <Img
@@ -91,9 +94,9 @@ export default function LandingPageCard({
           </div>
           <div className="flex flex-row justify-between items-center w-full pr-[47px] md:pr-5">
             <Button className="h-[48px] px-[31px] sm:px-5 text-white-A700 text-base font-semibold bg-gray-900 min-w-[156px] rounded-[10px">
-              {viewDetails}
+              <Link to={`/property/${id}`}>{viewDetails}</Link>
             </Button>
-            <Text className="text-gray-900 tracking-[-0.48px] text-2x1 font-bold">
+            <Text className="text-gray-900 tracking-[-0.48px] text-2xl font-bold">
               {price}
             </Text>
           </div>
