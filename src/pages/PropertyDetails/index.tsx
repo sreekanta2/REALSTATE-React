@@ -1,22 +1,69 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Button, Heading, Img } from "../../components";
+import imageOne from "../../../public/image/img_rectangle_5604.png";
+import offerimage from "../../../public/image/offer.jpg";
+import { Button, Heading, Img, Input, Text } from "../../components";
 import CheckBox from "../../components/Checkbox";
 import { GoogleMap } from "../../components/GoogleMap";
 import LandingPageCard from "../../components/LandingPageCard";
 import { RatingBar } from "../../components/RatingBar";
 import { TextArea } from "../../components/TextArea";
+import ThumbSlider from "../../components/ThumbSlider";
 
 export default function PropertyDetails() {
   const [open, setOpen] = useState(false);
   const lists = [1, 2, 3, 4];
   return (
-    <div className="bg-[#f5f7fb] w-full">
-      <div className="  max-w-[1200px] mx-auto grid sm:grid-cols-1 md:grid-cols-2  grid-cols-3 gap-6 ">
-        <div className="col-span-2">
-          {/* <ThumbSlider /> */}
+    <div className="bg-[#f5f7fb] w-full ">
+      <div className="  max-w-[1200px] mx-auto grid sm:grid-cols-1 md:grid-cols-2  grid-cols-3 gap-6 mt-14 ">
+        <div className="col-span-2 md:mx-4 flex flex-col gap-14 ">
+          <div className="flex justify-between items-center px-6">
+            <div className="flex flex-col  gap-2">
+              <Heading
+                size="md"
+                as="h1"
+                className="tracking-[.9px] text-[24px] font-extrabold  "
+              >
+                Luxury Villa House
+                <span className="bg-[#FF385C] px-3 py-1 ml-4 rounded-full text-white-A700 text-sm  font-medium">
+                  For Sale
+                </span>
+              </Heading>
+              <div className="flex flex-row justify-start items-center w-full gap-3">
+                <Img
+                  src="../../../public/image/map-pin-2-line.svg"
+                  className="w-5"
+                  alt="image_two"
+                />
+                <Text className="!text-gray-600 text-base font-semibold">
+                  77 - Central Park South, NYC
+                </Text>
+              </div>
+            </div>
+            <div>
+              <Text className="!text-[#FF385C] text-2xl font-semibold">
+                $ 230,000
+              </Text>
+              <Text className="!text-gray-700 text-base font-semibold">
+                $ 1,200 / sq ft
+              </Text>
+            </div>
+          </div>
+
+          <div className=" p-4 bg-white-A700  shadow-[0_3px_10px_rgb(0,0,0,0.2)] ">
+            <Heading
+              size="md"
+              as="h1"
+              className="tracking-[-0.92px] text-[18px] font-extrabold mb-6"
+            >
+              Gallery
+              <div className="border-2 border-b w-12 border-red-500" />
+            </Heading>
+            <ThumbSlider />
+          </div>
+
           {/* description */}
-          <div className="bg-white-A700   shadow-[0_3px_10px_rgb(0,0,0,0.2)] my-14 p-8">
+          <div className="bg-white-A700   shadow-[0_3px_10px_rgb(0,0,0,0.2)]   p-4 ">
             <Heading
               size="md"
               as="h1"
@@ -54,7 +101,7 @@ export default function PropertyDetails() {
           </div>
 
           {/* property type */}
-          <div className="bg-white-A700 flex flex-col gap-20  shadow-[0_3px_10px_rgb(0,0,0,0.2)] my-24 p-8">
+          <div className="bg-white-A700 flex flex-col gap-20  shadow-[0_3px_10px_rgb(0,0,0,0.2)]   p-4">
             <div>
               <Heading
                 size="md"
@@ -106,7 +153,7 @@ export default function PropertyDetails() {
             </div>
           </div>
           {/* floor plans */}
-          <div className="bg-white-A700   shadow-[0_3px_10px_rgb(0,0,0,0.2)] my-14 p-8">
+          <div className="bg-white-A700   shadow-[0_3px_10px_rgb(0,0,0,0.2)]   p-4">
             <div>
               <Heading
                 size="md"
@@ -125,7 +172,7 @@ export default function PropertyDetails() {
             </div>
           </div>
           {/* nearby */}
-          <div className="bg-white-A700 flex flex-col gap-6  shadow-[0_3px_10px_rgb(0,0,0,0.2)] my-24 p-8">
+          <div className="bg-white-A700 flex flex-col gap-6  shadow-[0_3px_10px_rgb(0,0,0,0.2)]   p-4">
             <Heading
               size="md"
               as="h1"
@@ -226,7 +273,7 @@ export default function PropertyDetails() {
             </div>
           </div>
           {/* video */}
-          <div className="bg-white-A700   shadow-[0_3px_10px_rgb(0,0,0,0.2)] my-14 p-8">
+          <div className="bg-white-A700   shadow-[0_3px_10px_rgb(0,0,0,0.2)]   p-4">
             <div>
               <Heading
                 size="md"
@@ -274,7 +321,7 @@ export default function PropertyDetails() {
             </div>
           </div>
           {/*Location */}
-          <div className="bg-white-A700   shadow-[0_3px_10px_rgb(0,0,0,0.2)] my-14 p-8">
+          <div className="bg-white-A700   shadow-[0_3px_10px_rgb(0,0,0,0.2)]   p-4">
             <div>
               <Heading
                 size="md"
@@ -289,7 +336,7 @@ export default function PropertyDetails() {
             </div>
           </div>
           {/* review */}
-          <div className="bg-white-A700   shadow-[0_3px_10px_rgb(0,0,0,0.2)] my-14 p-8">
+          <div className="bg-white-A700   shadow-[0_3px_10px_rgb(0,0,0,0.2)]   p-4">
             <div>
               <Heading
                 size="md"
@@ -448,9 +495,190 @@ export default function PropertyDetails() {
             </form>
           </div>
         </div>
-        <div className="col-span-1">Content 2</div>
+        <div className="col-span-1 md:col-span-2 flex flex-col gap-10 md:mx-4 md:mt-8">
+          {/* agent information */}
+          <div className=" flex flex-col gap-2 bg-[#fdfdfd] rounded-md p-4">
+            {/* agent details */}
+            <Heading
+              size="md"
+              as="h1"
+              className="tracking-[.92px] font-extrabold mb-2"
+            >
+              Agent Information
+            </Heading>
+            <div className="border-b" />
+            <div className="flex flex-col gap-4">
+              <div className="mt-8 flex  gap-4 ">
+                <div className="w-20 h-20 overflow-hidden rounded-full  ring ring-gray-200">
+                  <Img
+                    src={imageOne}
+                    alt="image_one"
+                    className="w-full h-auto  object-cover "
+                  />
+                </div>
+                <div>
+                  <Heading size="md" as="h1" className="  font-extrabold  ">
+                    Lisa Clark
+                  </Heading>
+                  <Text>Agent of Property</Text>
+                </div>
+              </div>
+              <div className="  w-full  flex flex-col gap-4">
+                <div className="flex flex-row justify-start items-center gap-3">
+                  <Img
+                    src="../../../public/image/readmap-pin.svg"
+                    alt="1032_sqft_one"
+                    className="h-[20px] w-[20px]"
+                  />
+                  <Text className="!text-gray-700 text-base font-semibold">
+                    302 Av Park, New York
+                  </Text>
+                </div>
+                <div className="flex flex-row justify-start items-center gap-3">
+                  <Img
+                    src="../../../public/image/phone-fill.svg"
+                    alt="1032_sqft_one"
+                    className="h-[20px] w-[20px]"
+                  />
+                  <Text className="!text-gray-700 text-base font-semibold">
+                    01737813575
+                  </Text>
+                </div>
+                <div className="flex flex-row justify-start items-center gap-3">
+                  <Img
+                    src="../../../public/image/mail-fill.svg"
+                    alt="1032_sqft_one"
+                    className="h-[20px] w-[20px]"
+                  />
+                  <Text className="!text-gray-700 text-base font-semibold">
+                    shreekantaray@gmail.com
+                  </Text>
+                </div>
+              </div>
+              <div className="border-b mb-4" />
+            </div>
+            {/* Request Inquiry */}
+            <Heading
+              size="md"
+              as="h1"
+              className="tracking-[.92px] font-extrabold mb-6"
+            >
+              Request Inquery
+            </Heading>
+            <form className="flex flex-col gap-2">
+              <Input
+                shape="round"
+                type="text"
+                size="sm"
+                required
+                name="message"
+                placeholder="Full Name"
+                prefix={
+                  <Img
+                    src="../../../public/image/img_icon_24px_user.svg"
+                    alt="icon/24px/user"
+                  />
+                }
+                className="w-full gap-3.5 font-semibold border-blue_gray-100_01 border border-solid"
+              />
+              <Input
+                required
+                shape="round"
+                size="sm"
+                type="email"
+                name="email"
+                placeholder="Email Address"
+                prefix={
+                  <Img
+                    src="../../../public/image/img_icon_24px_email.svg"
+                    alt="icon/24px/ email"
+                  />
+                }
+                className="w-full gap-3.5 font-semibold border-blue gray-100 01 border border-solid"
+              />
+              <Input
+                required
+                shape="round"
+                type="text"
+                size="sm"
+                name="phoneNumber"
+                placeholder="Phone Number"
+                prefix={
+                  <img
+                    src="../../../public/image/img_icon_20px_call.svg"
+                    alt="icon/24px/call"
+                  />
+                }
+                className="w-full gap-3.5 font-semibold border-blue_gray-100_01 border border-solid"
+              />
+              <TextArea
+                required
+                shape="round"
+                name="inputbox_one"
+                placeholder="Message"
+                className="w-full sm:pb-5 sm:pr-5 text-gray-600_02 font-semibold"
+              />
+              <Button
+                size="2xl"
+                shape="round"
+                className="w-full sm:px-5 mt-10 font-semibold bg-[#FF385C] hover:bg-black delay-150 ease-in-out"
+              >
+                Send Request
+              </Button>
+            </form>
+          </div>
+          {/*  Recent Properties*/}
+          <div className=" flex flex-col gap-2 bg-[#fdfdfd] rounded-md p-4">
+            {/* agent details */}
+            <Heading
+              size="md"
+              as="h1"
+              className="tracking-[.92px] font-extrabold mb-2"
+            >
+              Recent Properties
+            </Heading>
+            <div className="border-b" />
+            <div className="flex flex-col gap-4">
+              {lists.map(() => (
+                <div className="mt-2 flex  gap-6 ">
+                  <Img
+                    src={imageOne}
+                    alt="image_one"
+                    className="w-20 h-20 object-cover "
+                  />
+
+                  <div
+                    className="flex flex-col
+                 gap-2"
+                  >
+                    <Heading size="md" as="h1" className="  font-extrabold  ">
+                      Lisa Clark
+                    </Heading>
+                    <Text>Agent of Property</Text>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          {/*  Offer*/}
+          <div className=" flex flex-col gap-2 bg-[#fdfdfd]   p-4">
+            <Heading
+              size="md"
+              as="h1"
+              className="tracking-[.92px] font-extrabold mb-2"
+            >
+              Specials of the day
+            </Heading>
+            <div className="border-b mb-4" />
+            <Img
+              src={offerimage}
+              alt="image_one"
+              className="w-full   object-cover "
+            />
+          </div>
+        </div>
       </div>
-      <div className="  max-w-[1200px] mx-auto md:mx-8 my-8 ">
+      <div className="  max-w-[1200px] mx-auto md:mx-4  my-4 ">
         <div className="flex flex-row sm:flex-col justify-between items-start w-full sm:gap-10">
           <Heading
             size="md"
@@ -477,7 +705,7 @@ export default function PropertyDetails() {
         </div>
         <div className=" grid justify-center w-full gap-6 grid-cols-3 md:grid-cols-2 md:gap-5 sm:grid-cols-1 ">
           {lists.map(() => (
-            <LandingPageCard className="bg-white-A700" />
+            <LandingPageCard className="bg-white-A700 border rounded-[10px] p-4" />
           ))}
         </div>
       </div>

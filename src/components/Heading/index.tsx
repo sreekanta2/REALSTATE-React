@@ -1,8 +1,9 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from "react";
 const sizes = {};
 export type HeadingProps = Partial<{
   className: string;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+
   as: any;
   size: string;
 }> &

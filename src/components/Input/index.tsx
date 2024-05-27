@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable @typescript-eslint/ban-types */
 import React from "react";
 
 const shapes = {
@@ -13,7 +11,7 @@ const variants = {
   },
 } as const;
 const sizes = {
-  sm: "h-[48px] p1-4 pr-[35px] text-sm",
+  sm: "h-[48px] px-4 pr-[35px] text-sm",
   xs: "h-[25px] pr-[30px] text-lg",
   md: "h-[60px] px-4 text-lg",
 } as const;
@@ -32,7 +30,7 @@ type InputProps = Omit<
     label: string;
     prefix: React.ReactNode;
     suffix: React.ReactNode;
-    onChange: Function;
+    handleChange: React.ChangeEventHandler<HTMLInputElement>;
     shape: keyof typeof shapes;
     variant: keyof typeof variants;
     size: keyof typeof sizes;
@@ -45,11 +43,11 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
       name = "",
       placeholder = "",
       type = "text",
-      children,
+
       label = "",
       prefix,
       suffix,
-      onChange,
+      handleChange,
       shape = "",
       variant = "fill",
       size = "md",
@@ -58,9 +56,6 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
     },
     ref
   ) => {
-    const handleChange: React.ChangeEventHandler<HTMLInputElement> = (e) => {
-      if (onChange) onChange(e);
-    };
     return (
       <>
         <div

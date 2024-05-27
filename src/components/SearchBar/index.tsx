@@ -43,7 +43,7 @@ export default function SearchBar() {
     setQuery((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  console.log(query);
+ 
   return (
     <div className="flex flex-row justify-center w-full p-6 sm:p-5 bg-white-A700 rounded-[16px]">
       <div className="flex flex-col items-center justify-start w-full">
@@ -70,11 +70,13 @@ export default function SearchBar() {
               onChange={handleSelectChange}
               suffix={
                 <Img
+
+
                   src="../../../public/image/img_icon_20px_updown_arrow.svg"
                   alt="icon/20px/up-down arrow"
                 />
               }
-              className="w-full gap-[35px] font-semibold border-blue_gray-108_01 border border-solid"
+              className="w-full   font-semibold border-blue_gray-108_01 border border-solid"
             />
             <Input
               shape="round"

@@ -24,7 +24,7 @@ const Routes = () => {
     { path: "dhiwise-dashboard", element: <Home /> },
 
     { path: "/", element: <LandingPage /> },
-    { path: "aboutus", element: <AboutPage /> },
+    { path: "about", element: <AboutPage /> },
 
     { path: "list", element: <ListingPage /> },
 
@@ -39,10 +39,10 @@ const Routes = () => {
       path: "agentlist/:id",
       element: <AgentProfile />,
     },
-    { path: "contactpage", element: <ContactPagePage /> },
-    { path: "blogpage", element: <BlogPage /> },
+    { path: "contact", element: <ContactPagePage /> },
+    { path: "blogs", element: <BlogPage /> },
 
-    { path: "blogdetails", element: <BlogDetailsPage /> },
+    { path: "blog/:id", element: <BlogDetailsPage /> },
     // {path: "error",
     // element: <Error />},
     { path: "faq", element: <FAQ /> },
@@ -56,7 +56,7 @@ const Routes = () => {
     { path: "privacypolicy", element: <PrivacyPolice /> },
     { path: "license", element: <LicensePage /> },
 
-    { path: "/notfound", element: <NotFound /> },
+    { path: "/*", element: <NotFound /> },
   ]);
   return element;
 };

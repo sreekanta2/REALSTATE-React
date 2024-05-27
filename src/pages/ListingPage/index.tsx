@@ -19,7 +19,13 @@ const images = [
   { src: "../../../public/image/img_image_5.png", id: 5 },
 ];
 export default function ListingPage() {
-  const [searchBarValue8, setSearchBarValue8] = useState("");
+  const [searchText, setSearchText] = useState("");
+
+  const handleInputChange = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ): void => {
+    setSearchText(event.target.value);
+  };
   return (
     <>
       <div className="flex flex-row justify-center w-full">
@@ -37,12 +43,12 @@ export default function ListingPage() {
                 shape="round"
                 name="search"
                 placeholder="Enter your address"
-                value={searchBarValue8}
-                onChange={(e: string) => setSearchBarValue8(e)}
+                value={searchText}
+                handleChange={handleInputChange}
                 suffix={
-                  searchBarValue8?.length > 0 ? (
+                  searchText?.length > 0 ? (
                     <CloseSVG
-                      onClick={() => setSearchBarValue8("")}
+                      onClick={() => setSearchText("")}
                       height={24}
                       width={24}
                       fillcolor="#626262ff"
@@ -215,13 +221,12 @@ export default function ListingPage() {
                 <div className="flex flex-col col-span-3 items-center justify-start    w-full gap-[60px]">
                   <div className="flex flex-col items-center justify-start w-full">
                     <div className="justify-center w-full gap-6 grid-cols-2 md:grid-cols-1 md:gap-5 grid">
-                      <LandingPageCard className="flex flex-col items-center justify-start w-full" />
                       {images.map((image) => (
                         <LandingPageCard
                           key={image.id}
                           id={image.id}
                           imageOne={image.src}
-                          className="flex flex-col items-center justify-start w-full"
+                          className="bg-white-A700 border rounded-[10px] p-4"
                         />
                       ))}
                     </div>

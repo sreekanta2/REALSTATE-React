@@ -407,27 +407,29 @@ export default function LandingPage() {
           <div className=" grid justify-center w-full gap-6 grid-cols-3 md:grid-cols-2 md:gap-5 sm:grid-cols-1 ">
             <LandingPageCard
               imageOne="../../../public/image/img_image_1.png"
-              className="flex flex-col items-center justify-start w-full"
+              className="bg-white-A700 border rounded-[10px] p-4"
             />
             <LandingPageCard
               imageOne="../../../public/image/img_image_2.png"
-              className="flex flex-col items-center justify-start w-full"
+              className="bg-white-A700 border rounded-[10px] p-4"
             />
+
             <LandingPageCard
               imageOne="../../../public/image/img_image_3.png"
-              className="flex flex-col items-center justify-start w-full"
+              className="bg-white-A700 border rounded-[10px] p-4"
             />
+
             <LandingPageCard
               imageOne="../../../public/image/img_image_4.png"
-              className="flex flex-col items-center justify-start w-full"
+              className="bg-white-A700 border rounded-[10px] p-4"
             />
             <LandingPageCard
               imageOne="i../../../public/image/img_image_5.png"
-              className="flex flex-col items-center justify-start w-full"
+              className="bg-white-A700 border rounded-[10px] p-4"
             />
             <LandingPageCard
               imageOne="../../../public/image/img_image_1.png"
-              className="flex flex-col items-center justify-start w-full"
+              className="bg-white-A700 border rounded-[10px] p-4"
             />
           </div>
         </div>

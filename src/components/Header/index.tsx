@@ -1,6 +1,5 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import arrowDownImage from "../../../public/image/img_arrow_down.svg";
 import logo from "../../../public/image/img_real_estate_1.svg";
 import { CloseSVG } from "../../assets/images";
 import { Button } from "../Button";
@@ -13,16 +12,23 @@ interface Props {
   className?: string;
 }
 export default function Header({ ...props }: Props) {
-  const [searchBarValue1, setSearchBarValue1] = useState("");
+  const [searchText, setSearchText] = useState("");
+
+  const handleInputChange = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ): void => {
+    setSearchText(event.target.value);
+  };
   return (
     <header {...props}>
       <div className="flex flex-row md:flex-col  justify-between items-center w-full mx-auto md:gap-10 sm:px-5 md:px-0 max-w-[1200px]">
         {/* logo */}
-        <div className="flex flex-row justify-start items-start gap-[11px]">
-          <Link to="">
-            {" "}
-            <Img src={logo} alt="realestateone" className="h-[40px] w-[40px]" />
-          </Link>
+
+        <Link
+          to=""
+          className="flex flex-row justify-start items-start gap-[11px]"
+        >
+          <Img src={logo} alt="realestateone" className="h-[40px] w-[40px]" />
 
           <Text
             size="lg"
@@ -31,7 +37,8 @@ export default function Header({ ...props }: Props) {
           >
             Relasto
           </Text>
-        </div>
+        </Link>
+
         {/* menu */}
         <div className="flex flex-row sm:flex-col justify-between items-center md:w-full lg:w-[41%] sm:gap-10">
           <div className="flex flex-row w-full flex-wrap sm:w-full justify-center gap-10">
@@ -39,30 +46,35 @@ export default function Header({ ...props }: Props) {
               <Heading as="h6" className="text-base font-semibold">
                 <Link to="/">Home</Link>
               </Heading>
-              <Img
+              {/* <Img
                 src={arrowDownImage}
                 alt="home_two"
                 className="h-[16px] w-[16px] mt-0.5"
-              />
+              /> */}
             </div>
             <div className="flex flex-row justify-start items-start gap-1.5">
               <Heading as="h6" className="text-base font-semibold">
                 <Link to="/agentlist">Agents</Link>
               </Heading>
-              <Img
+              {/* <Img
                 src={arrowDownImage}
                 alt="arrowdown_one"
                 className="h-[16px] w-[16px]"
-              />
+              /> */}
             </div>
             <div className="flex flex-row justify-start items-start  gap-1.5">
               <Heading as="h6" className="text-base font-semibold">
-                <Link to="/property">Property</Link>
+                <Link to="/about">About</Link>
+              </Heading>
+            </div>
+            <div className="flex flex-row justify-start items-start  gap-1.5">
+              <Heading as="h6" className="text-base font-semibold">
+                <Link to="/contact">Contact</Link>
               </Heading>
             </div>{" "}
             <div className="flex flex-row justify-start items-start  gap-1.5">
               <Heading as="h6" className="text-base font-semibold">
-                <Link to="/blogpage">Blog</Link>
+                <Link to="/blogs">Blog</Link>
               </Heading>
             </div>
           </div>
@@ -72,10 +84,11 @@ export default function Header({ ...props }: Props) {
           <Input
             size="xs"
             shape="square"
+            type="text"
             name="search"
             placeholder="Search"
-            value={searchBarValue1}
-            onChange={(e: string) => setSearchBarValue1(e)}
+            value={searchText}
+            handleChange={handleInputChange}
             prefix={
               <Img
                 src="../../../public/image/img_icon_24px_search.svg"
@@ -84,9 +97,9 @@ export default function Header({ ...props }: Props) {
               />
             }
             suffix={
-              searchBarValue1?.length > 0 ? (
+              searchText?.length > 0 ? (
                 <CloseSVG
-                  onClick={() => setSearchBarValue1("")}
+                  onClick={() => setSearchText("")}
                   height={24}
                   width={24}
                   fillcolor="#191919ff"

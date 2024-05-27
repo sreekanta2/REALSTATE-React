@@ -2,6 +2,7 @@ import { FC, SVGProps } from "react";
 
 export type CloseSVGProps = SVGProps<SVGSVGElement> &
   Partial<{ fillcolor: string; className: string }>;
+
 export const CloseSVG: FC<CloseSVGProps> = ({
   fillcolor = "#000000",
   className = "",
@@ -13,11 +14,11 @@ export const CloseSVG: FC<CloseSVGProps> = ({
       xmlns="http://www.w3.org/2000/svg"
       className={className}
       {...props}
-      height={props?.height || 20}
-      width={props?.width || 20}
-      viewBox={`0 0 ${props?.width || 20} ${props?.height}||20`}
+      height={props.height || 20}
+      width={props.width || 20}
+      viewBox="0 0 24 24"
     >
-      <path d="M 4.7070312 3,2929688 L 3.2929688 4.7070312 L 10.585938 12 L 3.2929688 19.292969 L 4.7070312 20.707031 L 12 13.414062 L 19,292969 20.707031 L 20.707031 19.292969 L 13.414062 12 L 26.707031 4.7070312 L 19.292969 3.2929688 L 12 10.585938 L 4.7070312 3.2929688 z'" />
+      <path d="M12 10.5859L4.707 3.29297 3.293 4.70703 10.586 12 3.293 19.293 4.707 20.707 12 13.4141 19.293 20.707 20.707 19.293 13.414 12 20.707 4.70703 19.293 3.29297 12 10.5859Z" />
     </svg>
   );
 };

@@ -65,7 +65,7 @@ export default function ContactPagePage() {
                       />
                       <Input
                         shape="round"
-                        type="number"
+                        type="text"
                         name="phoneNumber"
                         placeholder="Phone Number"
                         prefix={

@@ -13,7 +13,13 @@ const dropDownOptions = [
 ];
 export default function AgentList() {
   const agents = [1, 2, 3, 4, 5, 6];
-  const [searchBarValue14, setSearchBarValue14] = useState("");
+  const [searchText, setSearchText] = useState("");
+
+  const handleInputChange = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ): void => {
+    setSearchText(event.target.value);
+  };
   return (
     <div className="flex flex-col items-center justify-start w-full gap-14">
       <div className="flex flex-row justify-center w-full">
@@ -30,12 +36,12 @@ export default function AgentList() {
               shape="round"
               name="search"
               placeholder="Enter your address"
-              value={searchBarValue14}
-              onChange={(e: string) => setSearchBarValue14(e)}
+              value={searchText}
+              handleChange={handleInputChange}
               suffix={
-                searchBarValue14?.length > 0 ? (
+                searchText?.length > 0 ? (
                   <CloseSVG
-                    onClick={() => setSearchBarValue14("")}
+                    onClick={() => setSearchText("")}
                     height={34}
                     width={34}
                     fillcolor="#6e6e6eff"
