@@ -5,12 +5,16 @@ import { CloseSVG } from "../../assets/images";
 import { Button, Heading, Img, Input } from "../../components";
 import { RatingBar } from "../../components/RatingBar";
 import { SelectBox } from "../../components/SelectBox";
+import {
+  dropDownOptions,
+  dropDownOptions2,
+  dropDownOptions3,
+} from "../../constants";
+interface Option {
+  label: string;
+  value: string;
+}
 
-const dropDownOptions = [
-  { label: "Option1", value: "option1" },
-  { label: "Option2", value: "option2" },
-  { label: "Option3", value: "option3" },
-];
 export default function AgentList() {
   const agents = [1, 2, 3, 4, 5, 6];
   const [searchText, setSearchText] = useState("");
@@ -20,68 +24,155 @@ export default function AgentList() {
   ): void => {
     setSearchText(event.target.value);
   };
+
+  const [selectedValues, setSelectedValues] = useState<Record<string, Option>>(
+    {}
+  );
+
+  const handleSelectChange = (name: string, value: Option) => {
+    setSelectedValues((prevValues) => ({
+      ...prevValues,
+      [name]: value,
+    }));
+  };
+  const removeSelectedValue = (valueToRemove: string) => {
+    setSelectedValues((prevValues) => {
+      const updatedSelectedValues = { ...prevValues };
+      Object.keys(updatedSelectedValues).forEach((key) => {
+        if (updatedSelectedValues[key].label === valueToRemove) {
+          delete updatedSelectedValues[key];
+        }
+      });
+      return updatedSelectedValues;
+    });
+  };
+
+  const selectedValuesArray = Object.values(selectedValues);
   return (
-    <div className="flex flex-col items-center justify-start w-full gap-14">
+    <div className="flex flex-col items-center justify-start w-full gap-14 py-10">
       <div className="flex flex-row justify-center w-full">
         <div className="flex flex-col items-start justify-start w-full pt-[5px] gap-[18px] md:px-5 max-w-[1200px]">
           <Heading
             size="4xl"
-            as="hl"
+            as="h1"
             className="tracking-[-0.72px] text-4xl font-extrabold"
           >
             Some Nearby Good Agents
           </Heading>
-          <div className="flex flex-row md:flex-col justify-start sm:w-full gap-4 md:gap-5">
-            <Input
-              shape="round"
-              name="search"
-              placeholder="Enter your address"
-              value={searchText}
-              handleChange={handleInputChange}
-              suffix={
-                searchText?.length > 0 ? (
-                  <CloseSVG
-                    onClick={() => setSearchText("")}
-                    height={34}
-                    width={34}
-                    fillcolor="#6e6e6eff"
-                  />
-                ) : (
+          <div className="flex flex-col items-center justify-start w-full gap-3">
+            <div className="flex flex-row md:flex-col justify-start w-full gap-5">
+              <Input
+                shape="round"
+                name="search"
+                placeholder="Enter your address"
+                value={searchText}
+                handleChange={handleInputChange}
+                suffix={
+                  searchText?.length > 0 ? (
+                    <CloseSVG
+                      onClick={() => setSearchText("")}
+                      height={24}
+                      width={24}
+                      fillColor="#626262ff"
+                    />
+                  ) : (
+                    <Img
+                      src="../../../public/image/img_icon_24px_search_gray_700.svg"
+                      alt="icon/24px / search"
+                      className="cursor-pointer"
+                    />
+                  )
+                }
+                className="w-[36%] md:w-full gap-[35px] !text-gray-700 font-semibold border-blue_gray-100_01 border border-solid"
+              />
+
+              <SelectBox
+                shape="round"
+                size="md"
+                options={dropDownOptions}
+                onChange={(value: Option) =>
+                  handleSelectChange("active_one", value)
+                }
+                indicator={
                   <Img
-                    src="../../../public/image/img_icon_24px_search_gray_600_02.svg"
-                    alt="icon/24px/search"
-                    className="cursor-pointer"
+                    src="../../../public/image/img_arrowdown_gray_600_02.svg"
+                    alt="arrow_down"
                   />
-                )
-              }
-              className="w-[50%] md:w-full gap-[35px] font-semibold border-blue_gray-100_01 border border-solid"
-            />
-            <SelectBox
-              shape="round"
-              indicator={
-                <Img
-                  src="../../../public/image/img_arrowdown_gray_600_02.svg"
-                  alt="arrow_down"
-                />
-              }
-              name="active"
-              placeholder="Category"
-              options={dropDownOptions}
-              className="w-[43%] md:w-full gap-px !text-gray-600_02 font-bold border-blue_gray-100_01 border border-solid"
-            />
-            <SelectBox
-              shape="round"
-              indicator={
-                <Img
-                  src="../../../public/image/img_arrowdown_gray_600_02.svg"
-                  alt="arrow_down"
-                />
-              }
-              name="active_one"
-              placeholder="Popular"
-              options={dropDownOptions}
-              className="w-[43%] md:w-full gap-px !text-gray-600_02 font-bold border-blue_gray-108_01 border border-solid"
-            />
+                }
+                placeholder="Popular"
+                className="w-[43%] md:w-full gap-px !text-gray-600_02 font-bold border-blue_gray-108_01 border border-solid"
+              />
+
+              <SelectBox
+                shape="round"
+                size="md"
+                options={dropDownOptions2}
+                onChange={(value: Option) =>
+                  handleSelectChange("active_two", value)
+                }
+                indicator={
+                  <Img
+                    src="../../../public/image/img_arrowdown_gray_600_02.svg"
+                    alt="arrow_down"
+                  />
+                }
+                placeholder="Popular"
+                className="w-[43%] md:w-full gap-px !text-gray-600_02 font-bold border-blue_gray-108_01 border border-solid"
+              />
+
+              <SelectBox
+                shape="round"
+                size="md"
+                options={dropDownOptions3}
+                onChange={(value: Option) =>
+                  handleSelectChange("active_three", value)
+                }
+                indicator={
+                  <Img
+                    src="../../../public/image/img_arrowdown_gray_600_02.svg"
+                    alt="arrow_down"
+                  />
+                }
+                placeholder="Popular"
+                className="w-[43%] md:w-full gap-px !text-gray-600_02 font-bold border-blue_gray-108_01 border border-solid"
+              />
+
+              <Button
+                shape="round"
+                rightIcon={
+                  <Img
+                    src="../../../public/image/img_icon_20px_search.svg"
+                    alt="icon / 20px / search"
+                  />
+                }
+                className="gap-2.5 font-bold min-w-[124px] h-[60px]"
+              >
+                Search
+              </Button>
+            </div>
+            {/* faltering start */}
+            <div className="flex flex-row md:flex-col justify-start w-full gap-2.5 md:gap-5">
+              {selectedValuesArray.length > 0 &&
+                selectedValuesArray.map((item: Option) => (
+                  <Button
+                    key={item.value}
+                    color="blue_gray_100"
+                    size="md"
+                    variant="outline"
+                    shape="round"
+                    rightIcon={
+                      <Img
+                        onClick={() => removeSelectedValue(item.value)}
+                        src="../../../public/image/img_icon_16px_close.svg"
+                        alt="icon / 16px / close"
+                      />
+                    }
+                    className="gap-2 font-semibold min-w-[145px]"
+                  >
+                    {item.value}
+                  </Button>
+                ))}
+            </div>
           </div>
         </div>
       </div>
@@ -100,7 +191,7 @@ export default function AgentList() {
               <div>
                 <div className="flex flex-col items-start justify-start w- [95%] gap-[7px] mx-1.5">
                   <Heading
-                    size="1g"
+                    size="lg"
                     as="h2"
                     className="tracking-[-0.40px] text-xl font-semibold"
                   >

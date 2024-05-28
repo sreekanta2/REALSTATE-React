@@ -1,16 +1,16 @@
 import { FC, SVGProps } from "react";
 
 export type SearchSVGProps = SVGProps<SVGSVGElement> &
-  Partial<{ fillcolor: string; className: string }>;
+  Partial<{ fillColor: string; className: string }>;
 
 export const SearchSVG: FC<SearchSVGProps> = ({
-  fillcolor = "#000000",
+  fillColor = "#000000",
   className = "",
   ...props
 }) => {
   return (
     <svg
-      fill={fillcolor}
+      fill={fillColor}
       xmlns="http://www.w3.org/2000/svg"
       className={className}
       {...props}

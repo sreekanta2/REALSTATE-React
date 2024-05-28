@@ -4,7 +4,7 @@ import logo from "../../../public/image/img_real_estate_1.svg";
 import { CloseSVG } from "../../assets/images";
 import { Button } from "../Button";
 import { Heading } from "../Heading";
-import { Img } from "../Img/Img";
+import { Img } from "../Img";
 import { Input } from "../Input";
 import { Text } from "../Text";
 
@@ -102,7 +102,7 @@ export default function Header({ ...props }: Props) {
                   onClick={() => setSearchText("")}
                   height={24}
                   width={24}
-                  fillcolor="#191919ff"
+                  fillColor="#191919ff"
                 />
               ) : null
             }

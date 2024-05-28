@@ -1,7 +1,7 @@
-import React from "react";
-import { Text } from "../Text";
-import { Img } from "../Img/Img";
+import { Link } from "react-router-dom";
 import { Heading } from "../Heading";
+import { Img } from "../Img";
+import { Text } from "../Text";
 
 export default function Footer() {
   return (
@@ -129,22 +129,22 @@ export default function Footer() {
                 Documentation
               </Heading>
               <div className="flex flex-col items-start justify-center w-full gap-[15px]">
-                <a href="#" className="mt-0.5">
+                <Link to="#" className="mt-0.5">
                   <Heading as="h6" className="text-base font-semibold">
                     Blog
                   </Heading>
-                </a>
+                </Link>
                 <Heading as="h6" className="text-base font-semibold">
                   FAQ
                 </Heading>
                 <Heading as="h6" className="text-base font-semibold">
                   Privacy Policy
                 </Heading>
-                <a href="#">
+                <Link to="#">
                   <Heading as="h6" className="text-base font-semibold">
                     License
                   </Heading>
-                </a>
+                </Link>
               </div>
             </div>
             <div className="flex flex-col items-start justify-start w-[19%] md:w-full gap-[15px]">
@@ -152,27 +152,27 @@ export default function Footer() {
                 Others
               </Heading>
               <div className="flex flex-col items-start justify-center w-full gap-[15px]">
-                <a href="#" className="mt-0.5">
+                <Link to="#" className="mt-0.5">
                   <Heading as="h6" className="text-base font-semibold">
                     Log in
                   </Heading>
-                </a>
+                </Link>
                 <Heading as="h6" className="text-base font-semibold">
                   Enter OTP
                 </Heading>
                 <Heading as="h6" className="text-base font-semibold">
                   New Password
                 </Heading>
-                <a href="#">
+                <Link to="#">
                   <Heading as="h6" className="text-base font-semibold">
                     Reset Password
                   </Heading>
-                </a>
-                <a href="#">
+                </Link>
+                <Link to="#">
                   <Heading as="h6" className="text-base font-semibold">
                     Create Account
                   </Heading>
-                </a>
+                </Link>
               </div>
             </div>
           </div>

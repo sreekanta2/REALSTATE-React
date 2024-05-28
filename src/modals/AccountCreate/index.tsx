@@ -31,11 +31,11 @@ export default function CreateAccount() {
                 <div className="flex flex-col items-center justify-start w-[49%] md:w-full gap-5">
                   <Input
                     shape="round"
-                    type="email"
-                    name="email"
-                    placeholder="user / email address"
+                    type="text"
+                    name="username"
+                    placeholder="username"
                     prefix={
-                      <img
+                      <Img
                         src="../../../public/image/img_icon_24px_user.svg"
                         alt="icon/24px/user"
                       />
@@ -69,10 +69,10 @@ export default function CreateAccount() {
                     shape="round"
                     type="email"
                     name="email"
-                    placeholder="user / email address"
+                    placeholder="  email address"
                     prefix={
                       <Img
-                        src="../../../public/image/img_icon_24px_user.svg"
+                        src="../../../public/image/img_icon_20px_email.svg"
                         alt="icon/24px/user"
                       />
                     }
@@ -134,7 +134,7 @@ export default function CreateAccount() {
           </div>
           <div className="h-px w-full bg-blue_gray-100_01" />
           <div className="flex flex-row md:flex-col justify-center w-full gap-2">
-            <a href="#" className="mb-px ml-[196px] md:m1-5">
+            <Link to="#" className="mb-px ml-[196px] md:m1-5">
               <Heading
                 size="lg"
                 as="h2"
@@ -142,12 +142,12 @@ export default function CreateAccount() {
               >
                 Have an account?
               </Heading>
-            </a>
-            <a href="#" className="mr-[196px] md:mr-5">
-              <Heading size="lg" as="h3" className=" text-x1 font-semibold">
+            </Link>
+            <Link to="#" className="mr-[196px] md:mr-5">
+              <Heading size="lg" as="h3" className=" text-xl font-semibold">
                 <Link to="/login">Log in</Link>
               </Heading>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

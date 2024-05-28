@@ -290,10 +290,10 @@ export default function PropertyDetails() {
                 />
                 {!open && (
                   <div
-                    className="video absolute inset-0 flex justify-center items-center "
+                    className=" absolute inset-0 flex justify-center items-center "
                     onClick={() => setOpen(true)}
                   >
-                    <ion-icon name="play"></ion-icon>
+                    <div className="play-btn" />
                   </div>
                 )}
                 {open && (
@@ -639,8 +639,8 @@ export default function PropertyDetails() {
             </Heading>
             <div className="border-b" />
             <div className="flex flex-col gap-4">
-              {lists.map(() => (
-                <div className="mt-2 flex  gap-6 ">
+              {lists.map((list) => (
+                <div className="mt-2 flex  gap-6 " key={list}>
                   <Img
                     src={imageOne}
                     alt="image_one"
@@ -704,8 +704,11 @@ export default function PropertyDetails() {
           </div>
         </div>
         <div className=" grid justify-center w-full gap-6 grid-cols-3 md:grid-cols-2 md:gap-5 sm:grid-cols-1 ">
-          {lists.map(() => (
-            <LandingPageCard className="bg-white-A700 border rounded-[10px] p-4" />
+          {lists.map((i) => (
+            <LandingPageCard
+              className="bg-white-A700 border rounded-[10px] p-4"
+              key={i}
+            />
           ))}
         </div>
       </div>

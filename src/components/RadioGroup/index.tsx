@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { HTMLAttributes } from "react";
 import { Radio } from "../Radio";
@@ -19,19 +18,14 @@ type RadioGroupProps = Omit<
   }>;
 
 const RadioGroup = React.forwardRef<HTMLInputElement, RadioGroupProps>(
-  (
-    {
-      selectedValue,
-      orientation = "horizontal",
-      className,
-      name,
-      children,
-      onChange,
-      disabled,
-      ...restProps
-    },
-    ref
-  ) => {
+  ({
+    selectedValue,
+    orientation = "horizontal",
+    className,
+    name,
+    children,
+    onChange,
+  }) => {
     const [value, setValue] = React.useState(selectedValue);
 
     React.useEffect(() => {

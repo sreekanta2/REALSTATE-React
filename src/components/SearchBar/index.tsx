@@ -1,8 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { CloseSVG } from "../../assets/images";
 import { Button } from "../Button";
-import { Img } from "../Img/Img";
+import { Img } from "../Img";
 import { Input } from "../Input";
 import { SelectBox } from "../SelectBox";
 interface Query {
@@ -42,8 +43,13 @@ export default function SearchBar() {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setQuery((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
+  const [searchText, setSearchText] = useState("");
 
- 
+  const handleInputChange = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ): void => {
+    setSearchText(event.target.value);
+  };
   return (
     <div className="flex flex-row justify-center w-full p-6 sm:p-5 bg-white-A700 rounded-[16px]">
       <div className="flex flex-col items-center justify-start w-full">
@@ -51,27 +57,37 @@ export default function SearchBar() {
           <form className="flex flex-col items-center justify-start w-full gap-5">
             <Input
               shape="round"
-              name="city"
-              placeholder="City/Street"
-              onChange={handleChange}
+              name="search"
+              placeholder="Enter City And Address"
+              value={searchText}
+              handleChange={handleInputChange}
               suffix={
-                <Img
-                  src="../../../public/image/img_icon_20px_map.svg"
-                  alt="icon / 20px/map"
-                />
+                searchText?.length > 0 ? (
+                  <CloseSVG
+                    onClick={() => setSearchText("")}
+                    height={34}
+                    width={34}
+                    fillColor="#6e6e6eff"
+                  />
+                ) : (
+                  <Img
+                    src="../../../public/image/img_icon_24px_search_gray_600_02.svg"
+                    alt="icon/24px/search"
+                    className="cursor-pointer"
+                  />
+                )
               }
-              className="w-full gap-[35px] font-semibold border-blue_gray-108_01 border border-solid"
+              className="w-full md:w-full gap-[35px] font-semibold border-blue_gray-100_01 border border-solid"
             />
             <SelectBox
               shape="round"
+              size="md"
               name="icon20pxupdowna"
               options={dropDownOptions}
               placeholder="Property Type"
               onChange={handleSelectChange}
               suffix={
                 <Img
-
-
                   src="../../../public/image/img_icon_20px_updown_arrow.svg"
                   alt="icon/20px/up-down arrow"
                 />
@@ -82,7 +98,7 @@ export default function SearchBar() {
               shape="round"
               name="price"
               placeholder="Price Range"
-              onChange={handleChange}
+              handleChange={handleChange}
               suffix={
                 <Img
                   src="../../../public/image/img_icon_20px_updown_arrow.svg"

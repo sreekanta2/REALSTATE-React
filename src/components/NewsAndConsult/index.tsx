@@ -1,6 +1,6 @@
 import { Button } from "../Button";
 import { Heading } from "../Heading";
-import { Img } from "../Img/Img";
+import { Img } from "../Img";
 import { Input } from "../Input";
 import { Text } from "../Text";
 
@@ -40,9 +40,9 @@ export default function NewsAndConsult() {
                 className="w-full md:h-auto sm:w-full object-cover rounded-[10px]"
               />
               <Heading
-                size="2x1"
+                size="2xl"
                 as="h4"
-                className="!text-white-A700 tracking-[-0.48px] text-2x1 font-bold leading-[135%]"
+                className="!text-white-A700 tracking-[-0.48px] text-2xl font-bold leading-[135%]"
               >
                 Looking for a New Place? Use This Time to Create Your Wishlist
               </Heading>
@@ -69,9 +69,9 @@ export default function NewsAndConsult() {
               />
               <div className="flex flex-col items-center justify-start w-full gap-[23px]">
                 <Heading
-                  size="2x1"
+                  size="2xl"
                   as="h6"
-                  className="!text-white-A700 tracking-[-0.48px] text-2x1 font-bold leading-[135%]"
+                  className="!text-white-A700 tracking-[-0.48px] text-2xl font-bold leading-[135%]"
                 >
                   Serie Shophouse Launch In July, Opportunity For Investors
                 </Heading>
@@ -79,7 +79,7 @@ export default function NewsAndConsult() {
                   <Heading
                     size="md"
                     as="h6"
-                    className="mt-px !text-deep_orange-400 text-1g font-bold"
+                    className="mt-px !text-deep_orange-400 text-lg font-bold"
                   >
                     Read the Article
                   </Heading>
@@ -99,9 +99,9 @@ export default function NewsAndConsult() {
               />
               <div className="flex flex-col items-center justify-start w-full gap-[23px]">
                 <Heading
-                  size="2x1"
+                  size="2xl"
                   as="h4"
-                  className="!text-white-A700 tracking-[-0.48px] text-2x1 font-bold leading-[135%]"
+                  className="!text-white-A700 tracking-[-0.48px] text-2xl font-bold leading-[135%]"
                 >
                   Looking for a New Place? Use This Time to Create Your Wishlist
                 </Heading>
@@ -126,7 +126,7 @@ export default function NewsAndConsult() {
         <div className="flex flex-col items-center justify-start w-full gap-[30px] p-10 sm:p-5 bg-gray-400_01 rounded-[10px]">
           <div className="flex flex-col items-center justify-start w-[54%] md:w-full pt-[3px] gap-[5px]">
             <Heading
-              size="3x1"
+              size="3xl"
               as="h3"
               className="tracking-[-0.56px] text-center text-[28px] font-extrabold"
             >
@@ -134,7 +134,7 @@ export default function NewsAndConsult() {
             </Heading>
             <Text
               as="p"
-              className="!text-gray-900 text-center text-1g font-normal leading-[180%]"
+              className="!text-gray-900 text-center text-lg font-normal leading-[180%]"
             >
               We helps businesses customize, automate and scale up their ad
               production and delivery.

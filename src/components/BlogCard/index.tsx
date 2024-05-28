@@ -1,7 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import { Button } from "../Button";
 import { Heading } from "../Heading";
-import { Img } from "../Img/Img";
+import { Img } from "../Img";
 
 export default function BlogCard() {
   const { id } = useParams();
@@ -27,9 +27,9 @@ export default function BlogCard() {
           </Button>
           <div className="flex flex-col items-center justify-start w-full gap-[15px]">
             <Heading
-              size="2x1"
+              size="2xl"
               as="h2"
-              className="tracking-[-0.48px] text-2x1 font-bold leading-[135%]"
+              className="tracking-[-0.48px] text-2xl font-bold leading-[135%]"
             >
               10 Delightful Dining Room Decor Trends for Spring
             </Heading>

@@ -1,5 +1,5 @@
 import { Heading } from "../Heading";
-import { Img } from "../Img/Img";
+import { Img } from "../Img";
 import { Text } from "../Text";
 
 export default function TeamCard({
@@ -15,13 +15,13 @@ export default function TeamCard({
       />
       <div className="flex flex-col items-start justify-center w-full gap-[3px]">
         <Heading
-          size="1g"
+          size="lg"
           as="h3"
           className="tracking-[-0.40px] text-xl font-semibold"
         >
           Kausar Pial
         </Heading>
-        <Text as="p" className="mb-0.5 !text-gray-700 text-1g font-normal">
+        <Text as="p" className="mb-0.5 !text-gray-700 text-lg font-normal">
           CEO
         </Text>
       </div>

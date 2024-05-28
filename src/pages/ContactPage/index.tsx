@@ -4,14 +4,14 @@ import { TextArea } from "../../components/TextArea";
 export default function ContactPagePage() {
   return (
     <>
-      <div className="flex flex-col items-center justify-start w-full gap-[100px] overflow-auto bg-gray-50_01">
+      <div className="flex flex-col items-center justify-start w-full gap-[100px] overflow-auto bg-gray-50_01 py-10">
         <div className="flex flex-col items-center justify-start w-full gap-[60px]">
           <div className="flex flex-row justify-center w-full">
             <div className="flex flex-col items-center justify-start w-full gap-11 md:px-5 max-w-[1200px]">
               <div className="flex flex-col items-center justify-start w-full pt-8.5 gap-[15px]">
                 <Heading
-                  size="6x1"
-                  as="hl"
+                  size="6xl"
+                  as="h1"
                   className="tracking-[-1.88px] text-center text-[54px] font-extrabold"
                 >
                   Get in touch
@@ -107,7 +107,7 @@ export default function ContactPagePage() {
                         <Heading
                           size="md"
                           as="h4"
-                          className="text-gray-600_02 text-1g font-semibold leading-[180%]"
+                          className="text-gray-600_02 text-lg font-semibold leading-[180%]"
                         >
                           <>
                             1421 San Pedro St, Los Angeles, <br />
@@ -139,7 +139,7 @@ export default function ContactPagePage() {
                           <Heading
                             size="md"
                             as="h6"
-                            className="mt-0.5 !text-gray-600_02 text-1g font-semibold"
+                            className="mt-0.5 !text-gray-600_02 text-lg font-semibold"
                           >
                             info@mail.com
                           </Heading>

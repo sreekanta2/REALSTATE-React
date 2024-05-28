@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
-import { Helmet } from "react-helmet";
+
+import { Helmet, HelmetProvider } from "react-helmet-async";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 interface LayoutProps {
@@ -7,7 +8,7 @@ interface LayoutProps {
 }
 export default function Layout({ children }: LayoutProps) {
   return (
-    <>
+    <HelmetProvider>
       <Helmet>
         <title>Srikanto</title>
         <meta name="srikanto" content="this the hotel management system" />
@@ -17,6 +18,6 @@ export default function Layout({ children }: LayoutProps) {
         {children}
         <Footer />
       </div>
-    </>
+    </HelmetProvider>
   );
 }

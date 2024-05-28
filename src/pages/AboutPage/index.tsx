@@ -11,7 +11,7 @@ export default function AboutPage() {
           <div className="flex flex-col items-center justify-start w-full gap-[38px] md:px-5 max-w-[1200px]">
             <div className="flex flex-col items-center justify-start w-full gap-4">
               <Heading
-                size="6x1"
+                size="6xl"
                 as="h1"
                 className="tracking-[-1.08px] text-center text-[54px] font-extrabold leading-[140%]"
               >
@@ -69,7 +69,7 @@ export default function AboutPage() {
               <div className="   flex flex-col items-center justify-center w-[19%] md:w-full gap-[18px]">
                 <Button
                   color="white_A700"
-                  size="3x1"
+                  size="3xl"
                   shape="circle"
                   className="w- [60px]"
                 >
@@ -77,14 +77,14 @@ export default function AboutPage() {
                 </Button>
                 <div className="flex flex-col items-start justify-start w-full gap-[13px]">
                   <Heading
-                    size="5x1"
+                    size="5xl"
                     as="h2"
                     className="tracking-[-0.92px] text-[46px] font-extrabold"
                   >
                     $15.4M
                   </Heading>
                   <Heading
-                    size="1g"
+                    size="lg"
                     as="h3"
                     className="!text-blue_gray-600 tracking-[-0.40px] text-xl font-semibold leading-[140%]"
                   >
@@ -99,7 +99,7 @@ export default function AboutPage() {
               <div className="flex flex-col items-start justify-start w-[19%] md:w-full gap-[18px]">
                 <Button
                   color="white_A700"
-                  size="3x1"
+                  size="3xl"
                   shape="circle"
                   className="w-[60px]"
                 >
@@ -107,7 +107,7 @@ export default function AboutPage() {
                 </Button>
                 <div className="flex flex-col items-start justify-start w-full gap-[13px]">
                   <Heading
-                    size="5x1"
+                    size="5xl"
                     as="h4"
                     className="tracking-[-0.92px] text-[46px] font-extrabold"
                   >
@@ -115,7 +115,7 @@ export default function AboutPage() {
                   </Heading>
 
                   <Heading
-                    size="1g"
+                    size="lg"
                     as="h5"
                     className="!text-blue_gray-600 tracking-[-0.40px] text-xl font-semibold leading-[140%]"
                   >
@@ -127,7 +127,7 @@ export default function AboutPage() {
               <div className="flex flex-col items-start justify-start w-[19%] md:w-full gap-[18px]">
                 <Button
                   color="white_A700"
-                  size="3x1"
+                  size="3xl"
                   shape="circle"
                   className="w-[60px]"
                 >
@@ -135,14 +135,14 @@ export default function AboutPage() {
                 </Button>
                 <div className="flex flex-col items-start justify-start w-full gap-[13px]">
                   <Heading
-                    size="5x1"
+                    size="5xl"
                     as="h6"
                     className="tracking-[-0.92px] text-[46px] font-extrabold"
                   >
                     500
                   </Heading>
                   <Heading
-                    size="1g"
+                    size="lg"
                     as="h5"
                     className="!text-blue_gray-600 tracking-[-0.40px] text-xl font-semibold leading-[140%]"
                   >
@@ -156,7 +156,7 @@ export default function AboutPage() {
               <div className="flex flex-col items-start justify-start w-[19%] md:w-full mb-[26px] gap-[18px]">
                 <Button
                   color="white_A700"
-                  size="3x1"
+                  size="3xl"
                   shape="circle"
                   className="w-[60px]"
                 >
@@ -164,14 +164,14 @@ export default function AboutPage() {
                 </Button>
                 <div className="flex flex-col items-start justify-start w-full gap-4">
                   <Heading
-                    size="5x1"
-                    as="hl"
+                    size="5xl"
+                    as="h1"
                     className="tracking-[-0.92px] text-[46px] font-extrabold"
                   >
                     600+
                   </Heading>
                   <Heading
-                    size="1g"
+                    size="lg"
                     as="h5"
                     className="!text-blue_gray-600 tracking-[-0.40px] text-xl font-semibold"
                   >
@@ -198,7 +198,7 @@ export default function AboutPage() {
                 </Heading>
                 <Text
                   as="p"
-                  className="!text-gray-700 text-1g font-normal leading-[180%]"
+                  className="!text-gray-700 text-lg font-normal leading-[180%]"
                 >
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. In a free hour,
@@ -208,7 +208,7 @@ export default function AboutPage() {
                 <div className="flex flex-row sm:flex-col justify-start items-start w-full gap-[26px] sm:gap-5">
                   <div className="flex flex-col items-center justify-start h-[35px] w-[35px]">
                     <Heading
-                      size="1g"
+                      size="lg"
                       as="h3"
                       className="flex justify-center items-center h-[35px] tracking-[-0.40px] text-center text-xl font-extrabold border-gray-900 border-2 border-solid rounded-[17px]"
                     >
@@ -217,7 +217,7 @@ export default function AboutPage() {
                   </div>
                   <div className="flex flex-col items-start justify-start w-[89%] sm:w-full gap-4">
                     <Heading
-                      size="x1"
+                      size="xl"
                       as="h4"
                       className="tracking-[-0.44px] text-[22px] font-bold"
                     >
@@ -225,7 +225,7 @@ export default function AboutPage() {
                     </Heading>
                     <Text
                       as="p"
-                      className="!text-gray-700 text-1g font-normal leading-[180%]"
+                      className="!text-gray-700 text-lg font-normal leading-[180%]"
                     >
                       Lorem Ipsum is simply dummy text of the printing and
                       typesetting industry. In a free hour, On the other hand,
@@ -255,7 +255,7 @@ export default function AboutPage() {
                     </Heading>
                     <Text
                       as="p"
-                      className="!text-gray-700 text-1g font-normal leading-[180%]"
+                      className="!text-gray-700 text-lg font-normal leading-[180%]"
                     >
                       Lorem Ipsum is simply dummy text of the printing and
                       typesetting industry. In a free hour, On the other hand,
@@ -268,7 +268,7 @@ export default function AboutPage() {
                 <div className="flex flex-row sm:flex-col justify-start items-start w-full gap-[26px] sm:gap-5">
                   <div className="flex flex-col items-center justify-start h-[35px] w-[35px]">
                     <Heading
-                      size="1g"
+                      size="lg"
                       as="h5"
                       className="flex justify-center items-center h-[35px] tracking-[-0.40px] text-center text-xl font-extrabold border-gray-900 border-2 border-solid rounded-[17px]"
                     >
@@ -286,7 +286,7 @@ export default function AboutPage() {
                     </Heading>
                     <Text
                       as="p"
-                      className="text-gray-700 text-1g font-normal leading-[180%]"
+                      className="text-gray-700 text-lg font-normal leading-[180%]"
                     >
                       Lorem Ipsum is simply dummy text of the printing and
                       typesetting industry. In a free hour, On the other hand,
@@ -343,7 +343,7 @@ export default function AboutPage() {
               </div>
               <div className="flex flex-col items-start justify-center w-full gap-[9px]">
                 <Heading
-                  size="1g"
+                  size="lg"
                   as="h3"
                   className="tracking-[-0.40px] text-xl font-semibold"
                 >

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "../Button";
-import { Img } from "../Img/Img";
+import { Img } from "../Img";
 import { Text } from "../Text";
 
 interface Props {

@@ -12,8 +12,8 @@ export default function NotFound() {
         />
         <div className="flex flex-col items-center justify-center w-[54%] md:w-full gap-[19px]">
           <Heading
-            size="3x1"
-            as="hl"
+            size="3xl"
+            as="h1"
             className="mt-px tracking-[-0.56px] text-center text-[28px] font-extrabold"
           >
             Something wrong!

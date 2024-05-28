@@ -8,8 +8,8 @@ export default function PrivacyPolice() {
           <div className="flex flex-col items-center justify-start w-full gap-18">
             <div className="flex flex-col items-start justify-start w-full gap-[5px]">
               <Heading
-                size="5x1"
-                as="hl"
+                size="5xl"
+                as="h1"
                 className="mt-1.5 tracking-[-0.92px] text-[46px] font-extrabold"
               >
                 Privacy Policy
@@ -32,9 +32,9 @@ export default function PrivacyPolice() {
             <div className="flex flex-col items-start justify-start w-full pt-0.5 gap-5">
               {" "}
               <Heading
-                size="2x1"
+                size="2xl"
                 as="h2"
-                className="tracking-[-0.48px] text-2x1 font-bold"
+                className="tracking-[-0.48px] text-2xl font-bold"
               >
                 1. The type of personal information we collect
               </Heading>
@@ -51,9 +51,9 @@ export default function PrivacyPolice() {
             </div>
             <div className="flex flex-col items-start justify-start w-full pt-0.5 gap-5">
               <Heading
-                size="2x1"
+                size="2xl"
                 as="h3"
-                className="tracking-[-0.48px] text-2x1 font-bold"
+                className="tracking-[-0.48px] text-2xl font-bold"
               >
                 2. Cookies and web analytics
               </Heading>
@@ -88,9 +88,9 @@ export default function PrivacyPolice() {
             </div>
             <div className="flex flex-col items-start justify-start w-full pt-0.5 gap-7">
               <Heading
-                size="2x1"
+                size="2xj"
                 as="h5"
-                className="tracking-[-0.48px] text-2x1 font-bold"
+                className="tracking-[-0.48px] text-2xl font-bold"
               >
                 4. Registration
               </Heading>
@@ -133,9 +133,9 @@ export default function PrivacyPolice() {
             </div>
             <div className="flex flex-col items-start justify-start w-full pt-0.5 gap-5">
               <Heading
-                size="2x1"
+                size="2xl"
                 as="h6"
-                className="tracking-[-0.48px] text-2x1 font-bold"
+                className="tracking-[-0.48px] text-2xl font-bold"
               >
                 5. Marketing Choices regarding your personal data
               </Heading>

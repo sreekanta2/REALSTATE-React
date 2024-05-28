@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState } from "react";
 
 import { CloseSVG } from "../../assets/images";
@@ -5,19 +6,18 @@ import { Button, Heading, Img, Input } from "../../components";
 import { GoogleMap } from "../../components/GoogleMap";
 import LandingPageCard from "../../components/LandingPageCard";
 import { SelectBox } from "../../components/SelectBox";
+import {
+  dropDownOptions,
+  dropDownOptions2,
+  dropDownOptions3,
+  images,
+} from "../../constants";
 
-const dropDownOptions = [
-  { label: "Option1", value: "option1" },
-  { label: "Option2", value: "option2" },
-  { label: "Option3", value: "option3" },
-];
-const images = [
-  { src: "../../../public/image/img_image_1.png", id: 1 },
-  { src: "../../../public/image/img_image_2.png", id: 2 },
-  { src: "../../../public/image/img_image_3.png", id: 3 },
-  { src: "../../../public/image/img_image_4.png", id: 4 },
-  { src: "../../../public/image/img_image_5.png", id: 5 },
-];
+interface Option {
+  label: string;
+  value: string;
+}
+
 export default function ListingPage() {
   const [searchText, setSearchText] = useState("");
 
@@ -26,13 +26,37 @@ export default function ListingPage() {
   ): void => {
     setSearchText(event.target.value);
   };
+  const [selectedValues, setSelectedValues] = useState<Record<string, Option>>(
+    {}
+  );
+
+  const handleSelectChange = (name: string, value: Option) => {
+    setSelectedValues((prevValues) => ({
+      ...prevValues,
+      [name]: value,
+    }));
+  };
+  const removeSelectedValue = (valueToRemove: string) => {
+    setSelectedValues((prevValues) => {
+      const updatedSelectedValues = { ...prevValues };
+      Object.keys(updatedSelectedValues).forEach((key) => {
+        if (updatedSelectedValues[key].label === valueToRemove) {
+          delete updatedSelectedValues[key];
+        }
+      });
+      return updatedSelectedValues;
+    });
+  };
+
+  const selectedValuesArray = Object.values(selectedValues);
+
   return (
     <>
       <div className="flex flex-row justify-center w-full">
         <div className="flex flex-col items-start justify-start w-full pt-[5px] gap-[18px] md:px-5 max-w-[1200px]">
           <Heading
             size="4xl"
-            as="hl"
+            as="h1"
             className="tracking-[-0.72px] text-4xl font-extrabold"
           >
             Find Property
@@ -51,7 +75,7 @@ export default function ListingPage() {
                       onClick={() => setSearchText("")}
                       height={24}
                       width={24}
-                      fillcolor="#626262ff"
+                      fillColor="#626262ff"
                     />
                   ) : (
                     <Img
@@ -66,60 +90,56 @@ export default function ListingPage() {
 
               <SelectBox
                 shape="round"
+                size="md"
+                options={dropDownOptions}
+                onChange={(value: Option) =>
+                  handleSelectChange("active_one", value)
+                }
                 indicator={
                   <Img
                     src="../../../public/image/img_arrowdown_gray_600_02.svg"
                     alt="arrow_down"
                   />
                 }
-                name="active_one"
                 placeholder="Popular"
-                options={dropDownOptions}
                 className="w-[43%] md:w-full gap-px !text-gray-600_02 font-bold border-blue_gray-108_01 border border-solid"
               />
 
               <SelectBox
                 shape="round"
+                size="md"
+                options={dropDownOptions2}
+                onChange={(value: Option) =>
+                  handleSelectChange("active_two", value)
+                }
                 indicator={
                   <Img
                     src="../../../public/image/img_arrowdown_gray_600_02.svg"
                     alt="arrow_down"
                   />
                 }
-                name="active_one"
                 placeholder="Popular"
-                options={dropDownOptions}
                 className="w-[43%] md:w-full gap-px !text-gray-600_02 font-bold border-blue_gray-108_01 border border-solid"
               />
+
               <SelectBox
                 shape="round"
+                size="md"
+                options={dropDownOptions3}
+                onChange={(value: Option) =>
+                  handleSelectChange("active_three", value)
+                }
                 indicator={
                   <Img
                     src="../../../public/image/img_arrowdown_gray_600_02.svg"
                     alt="arrow_down"
                   />
                 }
-                name="active_one"
                 placeholder="Popular"
-                options={dropDownOptions}
                 className="w-[43%] md:w-full gap-px !text-gray-600_02 font-bold border-blue_gray-108_01 border border-solid"
               />
+
               <Button
-                color="white_A700™"
-                size="4xl"
-                shape="round"
-                rightIcon={
-                  <Img
-                    src="../../../public/image/img_icon_24px_plus.svg"
-                    alt="icon / 24px / plus"
-                  />
-                }
-                className="gap-3 text-gray-700 font-bold border-blue_gray-100_01 border border-solid min-w-[113px]"
-              >
-                More
-              </Button>
-              <Button
-                size="4xl"
                 shape="round"
                 rightIcon={
                   <Img
@@ -127,88 +147,33 @@ export default function ListingPage() {
                     alt="icon / 20px / search"
                   />
                 }
-                className="gap-2.5 font-bold min-w-[124px]"
+                className="gap-2.5 font-bold min-w-[124px] h-[60px]"
               >
                 Search
               </Button>
             </div>
-            {/* feltiaring start */}
+            {/* faltering start */}
             <div className="flex flex-row md:flex-col justify-start w-full gap-2.5 md:gap-5">
-              <Button
-                color="blue_gray_100"
-                size="md"
-                variant="outline"
-                shape="round"
-                rightIcon={
-                  <Img
-                    src="../../../public/image/img_icon_16px_close.svg"
-                    alt="icon / 16px / close"
-                  />
-                }
-                className="gap-2 font-semibold min-w-[145px]"
-              >
-                Bathrooms 2+
-              </Button>
-              <Button
-                color="blue_gray_100"
-                size="md"
-                variant="outline"
-                shape="round"
-                rightIcon={
-                  <Img
-                    src="../../../public/image/img_icon_16px_close.svg"
-                    alt="icon / 16px / close"
-                  />
-                }
-                className="gap-2 font-semibold min-w-[243px]"
-              >
-                Square Feet 750 2000 sq. ft
-              </Button>
-              <Button
-                color="blue_gray_100"
-                size="md"
-                variant="outline"
-                shape="round"
-                rightIcon={
-                  <Img
-                    src="../../../public/image/img_icon_16px_close.svg"
-                    alt="icon / 16px / close"
-                  />
-                }
-                className="gap-2 font-semibold min-w-[151px]"
-              >
-                Year Built 5 - 15
-              </Button>
-              <Button
-                color="blue_gray_100"
-                size="md"
-                variant="outline"
-                shape="round"
-                rightIcon={
-                  <Img
-                    src="../../../public/image/img_icon_16px_close.svg"
-                    alt="icon / 16px / close"
-                  />
-                }
-                className="gap-2 !text-gray-900 font-semibold min-w-[168px]"
-              >
-                For Sale By Agent
-              </Button>
-              <Button
-                color="blue_gray_100"
-                size="md"
-                variant="outline"
-                shape="round"
-                rightIcon={
-                  <Img
-                    src="../../../public/image/img_icon_16px_close.svg"
-                    alt="icon / 16px / close"
-                  />
-                }
-                className="gap-2 !text-gray-900 font-semibold min-w-[174px]"
-              >
-                New Construction
-              </Button>
+              {selectedValuesArray.length > 0 &&
+                selectedValuesArray.map((item: Option) => (
+                  <Button
+                    key={item.value}
+                    color="blue_gray_100"
+                    size="md"
+                    variant="outline"
+                    shape="round"
+                    rightIcon={
+                      <Img
+                        onClick={() => removeSelectedValue(item.value)}
+                        src="../../../public/image/img_icon_16px_close.svg"
+                        alt="icon / 16px / close"
+                      />
+                    }
+                    className="gap-2 font-semibold min-w-[145px]"
+                  >
+                    {item.value}
+                  </Button>
+                ))}
             </div>
             {/* feltiaring end */}
             {/* googlemap start */}

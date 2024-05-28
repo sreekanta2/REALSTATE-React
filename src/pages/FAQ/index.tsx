@@ -1,14 +1,22 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import { CloseSVG } from "../../assets/images";
 import { Heading, Img, Input, Text } from "../../components";
 
 export default function FAQ() {
-  const [searchBarValue23, setSearchBarValue23] = useState("");
+  const [searchText, setSearchText] = useState("");
+
+  const handleInputChange = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ): void => {
+    setSearchText(event.target.value);
+  };
   return (
     <div className="flex flex-row justify-center w-full bg-[#fff9f6]">
       <div className="flex flex-row justify-center w-full">
         <div className="flex flex-col items-center justify-start w-full pt-[7px] gap-[33px] md:px-5 max-w-[1200px]">
           <Heading
-            size="5x1 "
+            size="5xl "
             as="h1"
             className="tracking-[-0.92px] text-center text-[46px] font-extrabold"
           >
@@ -16,45 +24,50 @@ export default function FAQ() {
           </Heading>
           <div className="flex flex-col items-center justify-start w-full gap-[25px]">
             <Input
-              shape="round"
+              size="xs"
+              shape="square"
+              type="text"
               name="search"
-              placeholder="Search Property / Anything"
-              value={searchBarValue23}
-              onChange={(e: string) => setSearchBarValue23(e)}
+              placeholder="Search"
+              value={searchText}
+              handleChange={handleInputChange}
+              prefix={
+                <Img
+                  src="../../../public/image/img_icon_24px_search.svg"
+                  alt="icon / 24px / search"
+                  className="cursor-pointer"
+                />
+              }
               suffix={
-                searchBarValue23?.length > 0 ? (
-                  <Img
-                    src="../../../public/image/img_icon_24px_filter.svg"
-                    alt="icon/24px/ filter"
-                    onClick={() => setSearchBarValue23("")}
-                    className="cursor-pointer"
+                searchText?.length > 0 ? (
+                  <CloseSVG
+                    onClick={() => setSearchText("")}
+                    height={24}
+                    width={24}
+                    fillColor="#191919ff"
                   />
                 ) : null
               }
-              className="w-full gap-3.5 font-semibold border-blue_gray-100_01 border border-solid"
+              className="w-[55%] gap-2 text-gray-908 font-bold"
             />
             <div className="flex flex-col items-start justify-start w-full gap-18 p-[27px] sm:p-5 border-blue_gray-108_01 border border-solid bg-white-A700 rounded-[10px]">
               <div className="flex flex-col items-start justify-start w-[64%] md:w-full pt-[3px] gap-[11px]">
                 <Heading
-                  size="1g"
+                  size="lg"
                   as="h2"
                   className="tracking-[-.48px] text-xl font-semibold"
                 >
                   You&#39;re viewing sample results.
                 </Heading>
                 <div className="flex flex-col items-start justify-start w-full gap-1">
-                  <a
-                    href="https://relasto.com"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
+                  <Link to="#" target="_blank" rel="noreferrer">
                     <Heading
                       as="h3"
                       className="!text-gray-600_02 text-base font-semibold"
                     >
                       https://relasto.com
                     </Heading>
-                  </a>
+                  </Link>
                   <Text
                     size="xs"
                     as="p"
@@ -70,7 +83,7 @@ export default function FAQ() {
                 <div className="flex flex-col items-start justify-start w-full pt-[3px] gap-[11px]">
                   {" "}
                   <Heading
-                    size="1g"
+                    size="lg"
                     as="h4"
                     className="tracking-[-0.40px] text-xl font-semibold"
                   >

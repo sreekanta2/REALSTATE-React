@@ -18,7 +18,7 @@ export default function Login() {
               <div className="flex flex-row justify-between items-start w-full">
                 <Heading
                   size="4xl"
-                  as="hl"
+                  as="h1"
                   className="tracking-[-0.72px] text-4xl font-extrabold"
                 >
                   Log in
@@ -101,24 +101,24 @@ export default function Login() {
         </div>
         <div className="h-px w-full bg-blue_gray-100_01" />
         <div className="flex flex-row sm:flex-col justify-center w-full gap-2 sm:gap-2">
-          <a href="#" className="ml-[25px] sm:ml-5">
+          <Link to="#" className="ml-[25px] sm:ml-5">
             <Heading
-              size="1g"
+              size="lg"
               as="h2"
               className="!text-gray-600_02 tracking-[-0.40px] text-center text-xl font-semibold"
             >
               Don't have an account?
             </Heading>
-          </a>
-          <a href="#" className="mr-[25px] sm:mr-5">
+          </Link>
+          <Link to="#" className="mr-[25px] sm:mr-5">
             <Heading
-              size="1g"
+              size="lg"
               as="h3"
               className="tracking-[-0.40px] text-xl font-semibold"
             >
               <Link to="/create-account"> Create Account</Link>
             </Heading>
-          </a>
+          </Link>
         </div>
       </div>
     </div>

@@ -24,7 +24,7 @@ const sizes = {
   "2xl": "h-[56px] px-[35px] text-base",
   xs: "h-[25px] text-lg",
   sm: "h-[30px]",
-  "3x1": "h-[60px] px-3.5",
+  "3xl": "h-[60px] px-3.5",
   md: "h-[36px] px-3.5 text-sm",
   lg: "h-[44px] px-4 text-base",
   "4xl": "h-[68px] px-[35px] text-lg",

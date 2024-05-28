@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Button, Heading, Img, Text } from "../../components";
 import LandingPageCard from "../../components/LandingPageCard";
 import { RatingBar } from "../../components/RatingBar";
@@ -5,7 +6,7 @@ import { RatingBar } from "../../components/RatingBar";
 export default function AgentProfile() {
   const reviews = [1, 2, 3, 4, 5];
   return (
-    <div className="flex flex-col items-center justify-start w-full gap-[100px] overflow-auto bg-gray-50_01">
+    <div className="flex flex-col items-center justify-start w-full gap-[100px] overflow-auto bg-gray-50_01 py-14">
       <div className="flex flex-col items-center justify-start w-full ">
         <div className="flex flex-col items-center justify-start w-full">
           <div className="flex flex-col items-center justify-start w-full">
@@ -19,7 +20,7 @@ export default function AgentProfile() {
             <div className="flex flex-col items-center justify-start w-full mt-[-46px] gap-[58px]">
               <div className="flex flex-row md:flex-col justify-start items-center w-full gap-[30px] md:gap-5 md:px-5 max-w-[1160px]">
                 <Img
-                  src="../../../public/image/img_rectangle_5599_150x150.png"
+                  src="../../../public/image/img_rectangle_5599_150xl50.png"
                   alt="image"
                   className="w-[150px] md:h-auto object-cover rounded-[10px]"
                 />
@@ -27,9 +28,9 @@ export default function AgentProfile() {
                   <div className="flex flex-row md:flex-col justify-start items-center w-[83%] md:w-full gap-8 md:gap-5">
                     <div className="flex flex-col items-start justify-start w-[49%] md:w-full gap-1.5">
                       <Heading
-                        size="2x1"
-                        as="hl"
-                        className="tracking-[-0.48px] text-2x1 font-bold"
+                        size="2xl"
+                        as="h1"
+                        className="tracking-[-0.48px] text-2xl font-bold"
                       >
                         Bruno Fernandes
                       </Heading>
@@ -55,7 +56,7 @@ export default function AgentProfile() {
                         <Heading
                           size="md"
                           as="h3"
-                          className="text-1g font-semibold"
+                          className="text-lg font-semibold"
                         >
                           (123) 456-7890
                         </Heading>
@@ -221,7 +222,7 @@ export default function AgentProfile() {
                 />
                 <div className="flex flex-col items-start justify-start w-[60%] sm:w-full gap-1.5">
                   <Heading
-                    size="2x1"
+                    size="2xl"
                     as="h2"
                     className="tracking-[-0.48px] text-2xl font-bold"
                   >
@@ -264,7 +265,7 @@ export default function AgentProfile() {
                   </div>
                 </div>
               </div>
-              <Text as="p" className="text-1g font-normal leading-[180%]">
+              <Text as="p" className="text-lg font-normal leading-[180%]">
                 <>
                   A slider is great way to display a slideshow featuring
                   ../../../public/image or videos, usually on your
@@ -285,7 +286,7 @@ export default function AgentProfile() {
           <div className="flex flex-col items-center justify-start w-[47%] md:w-full gap-6">
             <div className="flex flex-col items-start justify-center w-full gap-1.5">
               <Heading
-                size="1g"
+                size="lg"
                 as="h2"
                 className="mt-0.5 tracking-[-0.40px] text-xl font-semibold"
               >
@@ -294,14 +295,14 @@ export default function AgentProfile() {
               <Heading
                 size="md"
                 as="h3"
-                className="! text-gray-600_02 text-1g font-semibold"
+                className="! text-gray-600_02 text-lg font-semibold"
               >
                 15+ years experience
               </Heading>
             </div>
             <div className="flex flex-col items-start justify-center w-full gap-1.5">
               <Heading
-                size="1g"
+                size="lg"
                 as="h4"
                 className="mt-0.5 tracking-[-0.40px] text-xl font-semibold"
               >
@@ -310,14 +311,14 @@ export default function AgentProfile() {
               <Heading
                 size="md"
                 as="h5"
-                className="text-gray-600 02 text-1g font-semibold"
+                className="text-gray-600 02 text-lg font-semibold"
               >
                 Private House, Villa, Townhouse, Apartment
               </Heading>
             </div>
             <div className="flex flex-col items-start justify-center w-full gap-2">
               <Heading
-                size="1g"
+                size="lg"
                 as="h6"
                 className="tracking-[-0.40px] text-xl font-semibold"
               >
@@ -333,7 +334,7 @@ export default function AgentProfile() {
             </div>
             <div className="flex flex-col items-start justify-center w-full gap-2">
               <Heading
-                size="1g"
+                size="lg"
                 as="h5"
                 className="tracking-[-0.40px] text-xl font-semibold"
               >
@@ -342,7 +343,7 @@ export default function AgentProfile() {
               <Heading
                 size="md"
                 as="h6"
-                className="mb-px !text-gray-600_02 text-1g font-semibold"
+                className="mb-px !text-gray-600_02 text-lg font-semibold"
               >
                 {" "}
                 59 Orchard, NY 5005, US
@@ -351,7 +352,7 @@ export default function AgentProfile() {
             <div className="flex flex-row sm:flex-col justify-between w-full gap-[60px] sm:gap-10">
               <div className="flex flex-col items-start justify-center gap-[7px]">
                 <Heading
-                  size="1g"
+                  size="lg"
                   as="h5"
                   className="tracking-[-0.40px] text-xl font-semibold"
                 >
@@ -360,7 +361,7 @@ export default function AgentProfile() {
                 <Heading
                   size="md"
                   as="h6"
-                  className="mb-0.5 !text-gray-600_02 text-1g font-semibold"
+                  className="mb-0.5 !text-gray-600_02 text-lg font-semibold"
                 >
                   BF-0535
                 </Heading>
@@ -368,29 +369,24 @@ export default function AgentProfile() {
               <div className="flex flex-col items-start justify-center gap-[7px]">
                 Website
                 <Heading
-                  size="1g"
+                  size="lg"
                   as="h5"
                   className="tracking-[-0.40px] text-xl font-semibold"
                 ></Heading>
-                <a
-                  href="www.abc.com"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="mb-px"
-                >
+                <Link to="#" target="_blank" rel="noreferrer" className="mb-px">
                   <Heading
                     size="md"
                     as="h6"
-                    className="!text-gray-600_02 text-1g font-semibold underline"
+                    className="!text-gray-600_02 text-lg font-semibold underline"
                   >
                     www.abc.com
                   </Heading>
-                </a>
+                </Link>
               </div>
             </div>
             <div className="flex flex-col items-start justify-start w-full gap-3">
               <Heading
-                size="1g"
+                size="lg"
                 as="h5"
                 className="tracking-[-0.40px] text-xl font-semibold"
               >
@@ -432,7 +428,7 @@ export default function AgentProfile() {
           <div className="flex flex-col items-center justify-center w-full py-4 gap-[22px]">
             <div className="flex flex-row sm:flex-col justify-between items-center w-full px-[42px] md:px-5 sm:gap-10">
               <Heading
-                size="3x1"
+                size="3xl"
                 as="h2"
                 className="tracking-[-0.56px] text-[28px] font-extrabold"
               >
@@ -462,7 +458,7 @@ export default function AgentProfile() {
                   <Heading
                     size="2xl"
                     as="h2"
-                    className="mt-[9px] !text-gray-600_02 text-2x1 font-semibold leading-[165%]"
+                    className="mt-[9px] !text-gray-600_02 text-2xl font-semibold leading-[165%]"
                   >
                     Eget eu massa et consectetur. Mauris donec. Leo a, id sed
                     duis proin sodales. Turpis viverra diam porttitor mattis
@@ -480,7 +476,7 @@ export default function AgentProfile() {
                           className="flex justify-between"
                         />{" "}
                         <Heading
-                          size="1g"
+                          size="lg"
                           as="h3"
                           className="Itext-gray-600_02 tracking-[-0.40px] text-xl font-semibold"
                         >
@@ -488,7 +484,7 @@ export default function AgentProfile() {
                         </Heading>
                       </div>
                       <Heading
-                        size="1g"
+                        size="lg"
                         as="h4"
                         className="text-gray-600_02 tracking-[-0.40px] text-xl font-semibold"
                       >
@@ -504,7 +500,7 @@ export default function AgentProfile() {
                       <div className="flex flex-col items-start justify-center w-[92%] md:w-full gap-[5px]">
                         {" "}
                         <Heading
-                          size="3x1"
+                          size="3xl"
                           as="h5"
                           className="mt-0.5 tracking-[-0.56px] text-[28px] font-extrabold"
                         >
@@ -513,7 +509,7 @@ export default function AgentProfile() {
                         <Heading
                           size="md"
                           as="h6"
-                          className="text-1g font-semibold"
+                          className="text-lg font-semibold"
                         >
                           Product Manager Static Mania
                         </Heading>

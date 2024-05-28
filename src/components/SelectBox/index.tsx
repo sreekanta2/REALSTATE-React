@@ -10,7 +10,9 @@ const variants = {
   },
 } as const;
 const sizes = {
-  xs: "h-[60px] pl-4 pr-[35px] text-lg",
+  sm: "h-[48px] px-4 pr-[35px] text-sm",
+  xs: "h-[25px] pr-[30px] text-lg",
+  md: "h-[60px] px-4 text-lg",
 } as const;
 type selectOptionType = { value: string; label: string };
 type SelectProps = Omit<Props, "getOptionLabel"> &
@@ -19,7 +21,7 @@ type SelectProps = Omit<Props, "getOptionLabel"> &
     options: selectOptionType[];
     isSearchable: boolean;
     isMulti: boolean;
-    onChange: (option: any) => void;
+    handleOnChange: (option: any) => void;
     value: string;
     indicator: React.ReactElement;
     getOptionLabel: (e: any) => string;

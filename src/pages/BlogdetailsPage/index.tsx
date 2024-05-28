@@ -55,7 +55,7 @@ export default function BlogDetailsPage() {
             {info?.getValue?.()}
           </Heading>
         ),
-        header: (info) => (
+        header: () => (
           <Heading size="xs" as="p" className="py-[11px] text-xs font-semibold">
             Full Name
           </Heading>
@@ -71,7 +71,7 @@ export default function BlogDetailsPage() {
             {info?.getValue?.()}
           </Heading>
         ),
-        header: (info) => (
+        header: () => (
           <Heading size="xs" as="p" className="py-[11px] text-xs font-semibold">
             Title
           </Heading>
@@ -84,7 +84,7 @@ export default function BlogDetailsPage() {
             {info?.getValue?.()}
           </Heading>
         ),
-        header: (info) => (
+        header: () => (
           <Heading size="xs" as="p" className="py-[11px] text-xs font-semibold">
             Email Address
           </Heading>
@@ -97,7 +97,7 @@ export default function BlogDetailsPage() {
             {info?.getValue?.()}
           </Heading>
         ),
-        header: (info) => (
+        header: () => (
           <Heading size="xs" as="p" className="py-[11px] text-xs font-semibold">
             Phone Number
           </Heading>
@@ -113,7 +113,7 @@ export default function BlogDetailsPage() {
           <div className="flex flex-col items-start justify-start w-full pt-[5px] gap-[34px] mx-auto max-w-[1135px]">
             <Heading
               size="4xl"
-              as="hl"
+              as="h1"
               className="tracking-[-0.72px] text-4xl font-extrabold"
             >
               10 Delightful Dining Room Decor Trends for Spring
@@ -126,7 +126,7 @@ export default function BlogDetailsPage() {
                     alt="image"
                     className="w-full md:h-[550px] object-cover rounded-[10px]"
                   />
-                  <Text as="p" className="text-1g font-normal leading-[180%]">
+                  <Text as="p" className="text-lg font-normal leading-[180%]">
                     <>
                       What a time we are living in! A lot of things are coming
                       back, bringing back nostalgia. Wondering why I am talking
@@ -201,7 +201,7 @@ export default function BlogDetailsPage() {
                   >
                     Blockquotes
                   </Heading>
-                  <Text as="p" className="text-1g font-normal">
+                  <Text as="p" className="text-lg font-normal">
                     Blockquotes can be nested. Add a &gt;&gt; in front of the
                     paragraph you want to nest.
                   </Text>
@@ -219,7 +219,7 @@ export default function BlogDetailsPage() {
                       <div className="flex flex-col items-center justify-start md:w-full gap-[19px]">
                         <Text
                           as="p"
-                          className="text-1g font-normal leading-[180%]"
+                          className="text-lg font-normal leading-[180%]"
                         >
                           Static websites are way faster than dynamic ones. As
                           they don't have a back-end system, there is no time
@@ -229,7 +229,7 @@ export default function BlogDetailsPage() {
                         </Text>
                         <Text
                           as="p"
-                          className="text-1g font-normal leading-[180%]"
+                          className="text-lg font-normal leading-[180%]"
                         >
                           But why fast loading is important? According to Neil
                           Patel, 47% of people on the internet expect a web page
@@ -242,7 +242,7 @@ export default function BlogDetailsPage() {
                     <div className="flex flex-col items-center justify-start w-full gap-10 p-[38px] sm:p-5 border-blue_gray-100_01 border border-solid bg-white-A700 rounded-[10px]">
                       <div className="flex flex-col items-start justify-start w-[98%] md:w-full pt-[3px] gap-4">
                         <Heading
-                          size="1g"
+                          size="lg"
                           as="h5"
                           className="tracking-[-0.40px] text-xl font-semibold"
                         >
@@ -251,7 +251,7 @@ export default function BlogDetailsPage() {
                         <div className="flex flex-col items-center justify-start gap-[19px]">
                           <Text
                             as="p"
-                            className="text-1g font-normal leading-[180%]"
+                            className="text-lg font-normal leading-[180%]"
                           >
                             Static websites are way faster than dynamic ones. As
                             they don't have a back-end system, there is no time
@@ -261,7 +261,7 @@ export default function BlogDetailsPage() {
                           </Text>
                           <Text
                             as="p"
-                            className="text-1g font-normal leading-[180%]"
+                            className="text-lg font-normal leading-[180%]"
                           >
                             But why fast loading is important? According to Neil
                             Patel, 47% of people on the internet expect a web
@@ -271,14 +271,14 @@ export default function BlogDetailsPage() {
                       </div>
                       <div className="flex flex-col items-start justify-start w-[98%] md:w-full pt-[3px] gap-4">
                         <Heading
-                          size="1g"
+                          size="lg"
                           as="h6"
                           className="tracking-[-0.40px] text-xl font-semibold"
                         >
                           Performance: Faster Loading Speed
                         </Heading>
                         <div className="flex flex-col items-center justify-start pt-1.5 gap-5">
-                          <Text as="p" className="text-1g font-normal">
+                          <Text as="p" className="text-lg font-normal">
                             Dynamic site CMS like WordPress has a greater
                             dependency. They require an operating system like
                             Linux
@@ -302,13 +302,13 @@ export default function BlogDetailsPage() {
               <div className="flex flex-col items-center justify-start w-[88%] md:w-full gap-6">
                 <div className="flex flex-col items-start justify-start w-full pt-[3px] gap-[11px]">
                   <Heading
-                    size="3x1"
+                    size="3xl"
                     as="h3"
                     className="tracking-[-0.56px] text-[28px] font-extrabold"
                   >
                     Images
                   </Heading>
-                  <Text as="p" className="text-1g font-normal leading-[180%]">
+                  <Text as="p" className="text-lg font-normal leading-[180%]">
                     Being a fast loading and more secure website, you can choose
                     a static website for beginner to medium level workload.
                     Hopefully, you have got the answer to what is a static
@@ -326,13 +326,13 @@ export default function BlogDetailsPage() {
                 <div className="flex flex-col items-center justify-start w-full gap-[23px]">
                   <div className="flex flex-col items-start justify-start w-full gap-3.5">
                     <Heading
-                      size="3x1"
+                      size="3xl"
                       as="h3"
                       className="tracking-[-0.56px] text-[28px] font-extrabold"
                     >
                       Lists
                     </Heading>
-                    <Text as="p" className="text-1g font-normal leading-[180%]">
+                    <Text as="p" className="text-lg font-normal leading-[180%]">
                       Being a fast loading and more secure website, you can
                       choose a static website for beginner to medium level
                       workload. Hopefully, you have got the answer to what is a
@@ -346,7 +346,7 @@ export default function BlogDetailsPage() {
                         <Heading
                           size="md"
                           as="h6"
-                          className="mt-[5px] !text-gray-600_02 text-1g font-semibold"
+                          className="mt-[5px] !text-gray-600_02 text-lg font-semibold"
                         >
                           Performance: Faster Loading Speed
                         </Heading>
@@ -376,7 +376,7 @@ export default function BlogDetailsPage() {
                         <Heading
                           size="md"
                           as="h6"
-                          className="mt-[5px] !text-gray-600_02 text-1g font-semibold"
+                          className="mt-[5px] !text-gray-600_02 text-lg font-semibold"
                         >
                           Security: A More Secure Website
                         </Heading>
@@ -396,7 +396,7 @@ export default function BlogDetailsPage() {
                         <Heading
                           size="md"
                           as="h6"
-                          className="mt-[5px] sm:mt-0!text-gray-600_02 text-1g font-semibold"
+                          className="mt-[5px] sm:mt-0!text-gray-600_02 text-lg font-semibold"
                         >
                           Hosting and Pricing: Saves Your Budget For Good
                         </Heading>
@@ -408,14 +408,14 @@ export default function BlogDetailsPage() {
                       <Heading
                         size="md"
                         as="h6"
-                        className="h-[25px] mt-[3px] mb-0.5 !text-gray-600_02 text-1g font-bold"
+                        className="h-[25px] mt-[3px] mb-0.5 !text-gray-600_02 text-lg font-bold"
                       >
                         01.
                       </Heading>
                       <Heading
                         size="md"
                         as="h6"
-                        className="!text-gray-600_02 text-1g font-semibold"
+                        className="!text-gray-600_02 text-lg font-semibold"
                       >
                         Performance: Faster Loading Speed
                       </Heading>
@@ -424,14 +424,14 @@ export default function BlogDetailsPage() {
                       <Heading
                         size="md"
                         as="h6"
-                        className="mt-[3px] mb-0.5text-gray-600_02 text-1g font-bold"
+                        className="mt-[3px] mb-0.5text-gray-600_02 text-lg font-bold"
                       >
                         02.
                       </Heading>
                       <Heading
                         size="md"
                         as="h6"
-                        className="!text-gray-600 02 text-1g font-semibold"
+                        className="!text-gray-600 02 text-lg font-semibold"
                       >
                         Less Server-side Dependencies
                       </Heading>
@@ -440,14 +440,14 @@ export default function BlogDetailsPage() {
                       <Heading
                         size="md"
                         as="h6"
-                        className="mt-[3px] mb-0.5 sm:mt-0!text-gray-600_02 text-1g font-bold"
+                        className="mt-[3px] mb-0.5 sm:mt-0!text-gray-600_02 text-lg font-bold"
                       >
                         03.
                       </Heading>
                       <Heading
                         size="md"
                         as="h6"
-                        className="!text-gray-600_02 text-1g font-semibold"
+                        className="!text-gray-600_02 text-lg font-semibold"
                       >
                         Flexibility: More Freedom to Develop Websites
                       </Heading>
@@ -456,14 +456,14 @@ export default function BlogDetailsPage() {
                       <Heading
                         size="md"
                         as="h6"
-                        className="mt-[3px] mb-0.5 !text-gray-600_02 text-1g font-bold"
+                        className="mt-[3px] mb-0.5 !text-gray-600_02 text-lg font-bold"
                       >
                         04.
                       </Heading>
                       <Heading
                         size="md"
                         as="h6"
-                        className="text-gray-600_02 text-1g font-semibold"
+                        className="text-gray-600_02 text-lg font-semibold"
                       >
                         Security: A More Secure Website
                       </Heading>
@@ -472,7 +472,7 @@ export default function BlogDetailsPage() {
                       <Heading
                         size="md"
                         as="h6"
-                        className="mt-[3px] mb-0.5 sm:mt-0 Itext-gray-600_02 text-1g font-bold"
+                        className="mt-[3px] mb-0.5 sm:mt-0 Itext-gray-600_02 text-lg font-bold"
                       >
                         05.
                       </Heading>
@@ -488,7 +488,7 @@ export default function BlogDetailsPage() {
                       <Heading
                         size="md"
                         as="h6"
-                        className="mt-[3px] mb-0.5 sm:mt-0 !text-gray-600_02 text-1g font-bold"
+                        className="mt-[3px] mb-0.5 sm:mt-0 !text-gray-600_02 text-lg font-bold"
                       >
                         06.
                       </Heading>
@@ -498,13 +498,13 @@ export default function BlogDetailsPage() {
                 </div>
                 <div className="flex flex-col items-start justify-start gap-3.5">
                   <Heading
-                    size="3x1"
+                    size="3xl"
                     as="h3"
                     className="tracking-[-0.56px] text-[28px] font-extrabold"
                   >
                     Link
                   </Heading>
-                  <Text as="p" className="text-1g font-normal leading-[180%]">
+                  <Text as="p" className="text-lg font-normal leading-[180%]">
                     <>
                       Yes, a static website may have all its benefits, but is it
                       suitable for you? That's a big question. It depends on why
@@ -551,9 +551,9 @@ export default function BlogDetailsPage() {
                 </div>
                 <div className="flex flex-col items-start justify-start w-[88%] md:w-full pt-0.5 gap-5">
                   <Heading
-                    size="2x1"
+                    size="2xl"
                     as="h4"
-                    className="tracking-[-0.48px] text-2x1 font-bold"
+                    className="tracking-[-0.48px] text-2xl font-bold"
                   >
                     Writen by
                   </Heading>

@@ -21,7 +21,7 @@ export default function NewPassword() {
                     <Img src="../../../public/image/img_icon_24px_close.svg" />
                   </Button>
                 </div>
-                <Text as="p" className="Itext-gray-900 text-1g font-normal">
+                <Text as="p" className="Itext-gray-900 text-lg font-normal">
                   Enter your new password
                 </Text>
               </div>
@@ -70,7 +70,7 @@ export default function NewPassword() {
           </Button>
           <div className="h-px w-full bg-blue_gray-100_01" />
           <div className="flex flex-row sm:flex-col justify-center w-full gap-2 sm:gap-2">
-            <a href="#" className="mb-px ml-[58px] md:ml-5">
+            <Link to="#" className="mb-px ml-[58px] md:ml-5">
               <Heading
                 size="lg"
                 as="h2"
@@ -78,8 +78,8 @@ export default function NewPassword() {
               >
                 Remember the Password?
               </Heading>
-            </a>
-            <a href="#" className="mr-[58px] md:mr-5">
+            </Link>
+            <Link to="#" className="mr-[58px] md:mr-5">
               <Heading
                 size="lg"
                 as="h3"
@@ -87,7 +87,7 @@ export default function NewPassword() {
               >
                 <Link to="/login">Log In</Link>
               </Heading>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
