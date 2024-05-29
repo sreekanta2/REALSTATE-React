@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { CloseSVG } from "../../assets/images";
+import { searchImage, upDownImage } from "../../importImages";
 import { Button } from "../Button";
 import { Img } from "../Img";
 import { Input } from "../Input";
@@ -71,7 +72,7 @@ export default function SearchBar() {
                   />
                 ) : (
                   <Img
-                    src="../../../public/image/img_icon_24px_search_gray_600_02.svg"
+                    src={searchImage}
                     alt="icon/24px/search"
                     className="cursor-pointer"
                   />
@@ -86,12 +87,7 @@ export default function SearchBar() {
               options={dropDownOptions}
               placeholder="Property Type"
               onChange={handleSelectChange}
-              suffix={
-                <Img
-                  src="../../../public/image/img_icon_20px_updown_arrow.svg"
-                  alt="icon/20px/up-down arrow"
-                />
-              }
+              suffix={<Img src={upDownImage} alt="icon/20px/up-down arrow" />}
               className="w-full   font-semibold border-blue_gray-108_01 border border-solid"
             />
             <Input
@@ -99,12 +95,7 @@ export default function SearchBar() {
               name="price"
               placeholder="Price Range"
               handleChange={handleChange}
-              suffix={
-                <Img
-                  src="../../../public/image/img_icon_20px_updown_arrow.svg"
-                  alt="icon/20px/up-down arrow"
-                />
-              }
+              suffix={<Img src={upDownImage} alt="icon/20px/up-down arrow" />}
               className="w-full gap-[35px] font-semibold border-blue_gray-108_01 border border-solid"
             />
           </form>

@@ -4,7 +4,10 @@ import facebookOpacityImage from "../public/image/img_facebook.svg";
 import framerImage from "../public/image/img_frame_1000001678.svg";
 import rightArrowNormal from "../public/image/img_icon_16px_arrow_right.svg";
 import closeImage from "../public/image/img_icon_16px_close.svg";
-import emailImage from "../public/image/img_icon_20px_email.svg";
+import {
+  default as emailFillImage,
+  default as emailImage,
+} from "../public/image/img_icon_20px_email.svg";
 import eyeHideImage from "../public/image/img_icon_20px_eyehide.svg";
 import googleImage from "../public/image/img_icon_20px_google.svg";
 import lockImage from "../public/image/img_icon_20px_lock.svg";
@@ -25,13 +28,17 @@ import twitterImage from "../public/image/img_social_icon_twitter.svg";
 import youtubeImage from "../public/image/img_social_icon_youtube.svg";
 import twitterOpacityImage from "../public/image/img_twitte.svg";
 import unionImage from "../public/image/img_union.svg";
+import phoneFillImage from "../public/image/phone-fill.svg";
+import mapPinImage from "../public/image/readmap-pin.svg";
 
+import upDownImage from "../public/image/img_icon_20px_updown_arrow.svg";
 import phoneImage from "../public/image/img_icon_24px_call.svg";
 
 export {
   checkImage,
   closeImage,
   downArrow,
+  emailFillImage,
   emailImage,
   eyeHideImage,
   facebookImage,
@@ -42,7 +49,9 @@ export {
   linkdinImage,
   linkdinOpacityImage,
   lockImage,
+  mapPinImage,
   normalSearchImage,
+  phoneFillImage,
   phoneImage,
   plusImage,
   radditOpacityImage,
@@ -55,6 +64,7 @@ export {
   twitterImage,
   twitterOpacityImage,
   unionImage,
+  upDownImage,
   userImage,
   youtubeImage,
 };

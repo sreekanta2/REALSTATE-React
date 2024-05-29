@@ -1,7 +1,13 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import floorPlan from "../../../public/image/floor-plan-1.png";
+import gardianImage from "../../../public/image/graduation-cap-line.svg";
+import homeSliderImage from "../../../public/image/home-slider-4.jpg";
+import elipsImage from "../../../public/image/img_ellipse_2695.png";
 import imageOne from "../../../public/image/img_rectangle_5604.png";
+import healthImage from "../../../public/image/mental-health-line.svg";
 import offerimage from "../../../public/image/offer.jpg";
+import rosterImage from "../../../public/image/roadster-line.svg";
 import { Button, Heading, Img, Input, Text } from "../../components";
 import CheckBox from "../../components/Checkbox";
 import { GoogleMap } from "../../components/GoogleMap";
@@ -9,6 +15,16 @@ import LandingPageCard from "../../components/LandingPageCard";
 import { RatingBar } from "../../components/RatingBar";
 import { TextArea } from "../../components/TextArea";
 import ThumbSlider from "../../components/ThumbSlider";
+import {
+  emailFillImage,
+  emailImage,
+  mapPinImage,
+  phoneFillImage,
+  phoneImage,
+  rightArrowNormal,
+  rightArrowOrange,
+  userImage,
+} from "../../importImages";
 
 export default function PropertyDetails() {
   const [open, setOpen] = useState(false);
@@ -30,11 +46,7 @@ export default function PropertyDetails() {
                 </span>
               </Heading>
               <div className="flex flex-row justify-start items-center w-full gap-3">
-                <Img
-                  src="../../../public/image/map-pin-2-line.svg"
-                  className="w-5"
-                  alt="image_two"
-                />
+                <Img src={mapPinImage} className="w-5" alt="image_two" />
                 <Text className="!text-gray-600 text-base font-semibold">
                   77 - Central Park South, NYC
                 </Text>
@@ -164,10 +176,7 @@ export default function PropertyDetails() {
                 <div className="border-2 border-b w-12 border-red-300" />
               </Heading>
               <div>
-                <Img
-                  src="../../../public/image/floor-plan-1.png"
-                  className="w-full"
-                />
+                <Img src={floorPlan} className="w-full" />
               </div>
             </div>
           </div>
@@ -185,10 +194,7 @@ export default function PropertyDetails() {
 
             <div className=" flex flex-col gap-4">
               <div className="flex gap-1">
-                <Img
-                  src="../../../public/image/graduation-cap-line.svg"
-                  className="w-6  "
-                />
+                <Img src={gardianImage} className="w-6  " />
                 <Heading
                   size="md"
                   as="h3"
@@ -215,10 +221,7 @@ export default function PropertyDetails() {
 
             <div className=" flex flex-col gap-4">
               <div className="flex gap-1">
-                <Img
-                  src="../../../public/image/mental-health-line.svg"
-                  className="w-6  "
-                />
+                <Img src={healthImage} className="w-6  " />
                 <Heading
                   size="md"
                   as="h3"
@@ -245,10 +248,7 @@ export default function PropertyDetails() {
 
             <div className=" flex flex-col gap-4">
               <div className="flex gap-1">
-                <Img
-                  src="../../../public/image/roadster-line.svg"
-                  className="w-6  "
-                />
+                <Img src={rosterImage} className="w-6  " />
                 <Heading
                   size="md"
                   as="h3"
@@ -284,10 +284,7 @@ export default function PropertyDetails() {
                 <div className="border-2 border-b w-12 border-red-300" />
               </Heading>
               <div className="relative">
-                <Img
-                  src="../../../public/image/home-slider-4.jpg"
-                  className="w-full h-[400px]"
-                />
+                <Img src={homeSliderImage} className="w-full h-[400px]" />
                 {!open && (
                   <div
                     className=" absolute inset-0 flex justify-center items-center "
@@ -355,7 +352,7 @@ export default function PropertyDetails() {
                     <div className=" flex justify-between ">
                       <div className="flex gap-2">
                         <Img
-                          src="../../../public/image/img_ellipse_2695.png"
+                          src={elipsImage}
                           alt="taylor_wilson"
                           className="h-[80px] w-[80px] md:h-auto rounded-[50%]"
                         />
@@ -403,14 +400,8 @@ export default function PropertyDetails() {
                         customer relationships that last.{" "}
                       </Heading>
                       <div className="flex gap-6 sm:flex-col">
-                        <Img
-                          src="../../../public/image/s-3.jpg"
-                          className="w-44"
-                        />
-                        <Img
-                          src="../../../public/image/s-3.jpg"
-                          className="w-44"
-                        />
+                        <Img src={imageOne} className="w-44" />
+                        <Img src={imageOne} className="w-44" />
                       </div>
                     </div>
                   </div>
@@ -419,9 +410,7 @@ export default function PropertyDetails() {
                   color="gray_600_02"
                   variant="outline"
                   shape="round"
-                  rightIcon={
-                    <Img src="../../../public/image/img_arrow_down.svg" />
-                  }
+                  rightIcon={<Img src={rightArrowNormal} />}
                   className="gap-1 font-semibold  w-64    mb-6 sm:min-w-full"
                 >
                   See more
@@ -526,7 +515,7 @@ export default function PropertyDetails() {
               <div className="  w-full  flex flex-col gap-4">
                 <div className="flex flex-row justify-start items-center gap-3">
                   <Img
-                    src="../../../public/image/readmap-pin.svg"
+                    src={mapPinImage}
                     alt="1032_sqft_one"
                     className="h-[20px] w-[20px]"
                   />
@@ -536,7 +525,7 @@ export default function PropertyDetails() {
                 </div>
                 <div className="flex flex-row justify-start items-center gap-3">
                   <Img
-                    src="../../../public/image/phone-fill.svg"
+                    src={phoneFillImage}
                     alt="1032_sqft_one"
                     className="h-[20px] w-[20px]"
                   />
@@ -546,7 +535,7 @@ export default function PropertyDetails() {
                 </div>
                 <div className="flex flex-row justify-start items-center gap-3">
                   <Img
-                    src="../../../public/image/mail-fill.svg"
+                    src={emailFillImage}
                     alt="1032_sqft_one"
                     className="h-[20px] w-[20px]"
                   />
@@ -573,12 +562,7 @@ export default function PropertyDetails() {
                 required
                 name="message"
                 placeholder="Full Name"
-                prefix={
-                  <Img
-                    src="../../../public/image/img_icon_24px_user.svg"
-                    alt="icon/24px/user"
-                  />
-                }
+                prefix={<Img src={userImage} alt="icon/24px/user" />}
                 className="w-full gap-3.5 font-semibold border-blue_gray-100_01 border border-solid"
               />
               <Input
@@ -588,12 +572,7 @@ export default function PropertyDetails() {
                 type="email"
                 name="email"
                 placeholder="Email Address"
-                prefix={
-                  <Img
-                    src="../../../public/image/img_icon_24px_email.svg"
-                    alt="icon/24px/ email"
-                  />
-                }
+                prefix={<Img src={emailImage} alt="icon/24px/ email" />}
                 className="w-full gap-3.5 font-semibold border-blue gray-100 01 border border-solid"
               />
               <Input
@@ -603,12 +582,7 @@ export default function PropertyDetails() {
                 size="sm"
                 name="phoneNumber"
                 placeholder="Phone Number"
-                prefix={
-                  <img
-                    src="../../../public/image/img_icon_20px_call.svg"
-                    alt="icon/24px/call"
-                  />
-                }
+                prefix={<img src={phoneImage} alt="icon/24px/call" />}
                 className="w-full gap-3.5 font-semibold border-blue_gray-100_01 border border-solid"
               />
               <TextArea
@@ -697,7 +671,7 @@ export default function PropertyDetails() {
               <Link to="/property"> Explore All</Link>
             </Heading>
             <Img
-              src="../../../public/image/img_icon_24px_v.svg"
+              src={rightArrowOrange}
               alt="icon24pxv_one"
               className="h-[24px] w-[24px]"
             />
