@@ -9,6 +9,12 @@ import {
   dropDownOptions2,
   dropDownOptions3,
 } from "../../constants";
+import {
+  closeImage,
+  downArrow,
+  rightArrowNormal,
+  searchImage,
+} from "../../importImages";
 interface Option {
   label: string;
   value: string;
@@ -77,7 +83,7 @@ export default function BlogPage() {
                           />
                         ) : (
                           <Img
-                            src="../../../public/image/img_icon_24px_search_gray_700.svg"
+                            src={searchImage}
                             alt="icon/24px / search"
                             className="cursor-pointer"
                           />
@@ -93,12 +99,7 @@ export default function BlogPage() {
                       onChange={(value: Option) =>
                         handleSelectChange("active_one", value)
                       }
-                      indicator={
-                        <Img
-                          src="../../../public/image/img_arrowdown_gray_600_02.svg"
-                          alt="arrow_down"
-                        />
-                      }
+                      indicator={<Img src={downArrow} alt="arrow_down" />}
                       placeholder="Popular"
                       className="w-[43%] md:w-full gap-px !text-gray-600_02 font-bold border-blue_gray-108_01 border border-solid"
                     />
@@ -110,12 +111,7 @@ export default function BlogPage() {
                       onChange={(value: Option) =>
                         handleSelectChange("active_two", value)
                       }
-                      indicator={
-                        <Img
-                          src="../../../public/image/img_arrowdown_gray_600_02.svg"
-                          alt="arrow_down"
-                        />
-                      }
+                      indicator={<Img src={downArrow} alt="arrow_down" />}
                       placeholder="Popular"
                       className="w-[43%] md:w-full gap-px !text-gray-600_02 font-bold border-blue_gray-108_01 border border-solid"
                     />
@@ -127,12 +123,7 @@ export default function BlogPage() {
                       onChange={(value: Option) =>
                         handleSelectChange("active_three", value)
                       }
-                      indicator={
-                        <Img
-                          src="../../../public/image/img_arrowdown_gray_600_02.svg"
-                          alt="arrow_down"
-                        />
-                      }
+                      indicator={<Img src={downArrow} alt="arrow_down" />}
                       placeholder="Popular"
                       className="w-[43%] md:w-full gap-px !text-gray-600_02 font-bold border-blue_gray-108_01 border border-solid"
                     />
@@ -140,10 +131,7 @@ export default function BlogPage() {
                     <Button
                       shape="round"
                       rightIcon={
-                        <Img
-                          src="../../../public/image/img_icon_20px_search.svg"
-                          alt="icon / 20px / search"
-                        />
+                        <Img src={searchImage} alt="icon / 20px / search" />
                       }
                       className="gap-2.5 font-bold min-w-[124px] h-[60px]"
                     >
@@ -163,7 +151,7 @@ export default function BlogPage() {
                           rightIcon={
                             <Img
                               onClick={() => removeSelectedValue(item.value)}
-                              src="../../../public/image/img_icon_16px_close.svg"
+                              src={closeImage}
                               alt="icon / 16px / close"
                             />
                           }
@@ -230,10 +218,7 @@ export default function BlogPage() {
                   variant="outline"
                   shape="round"
                   rightIcon={
-                    <Img
-                      src="../../../public/image/img_icon_16px_arrow_right.svg"
-                      alt="icon/16px/arrow right"
-                    />
+                    <Img src={rightArrowNormal} alt="icon/16px/arrow right" />
                   }
                   className="gap-1 font-semibold min-w-[134px]"
                 >

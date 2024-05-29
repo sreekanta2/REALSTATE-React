@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import { Link } from "react-router-dom";
+import image1 from "../../../public/image/img_rectangle_5615.png";
 import { CloseSVG } from "../../assets/images";
 import { Button, Heading, Img, Input } from "../../components";
 import { RatingBar } from "../../components/RatingBar";
@@ -10,6 +11,12 @@ import {
   dropDownOptions2,
   dropDownOptions3,
 } from "../../constants";
+import {
+  closeImage,
+  downArrow,
+  normalSearchImage,
+  searchImage,
+} from "../../importImages";
 interface Option {
   label: string;
   value: string;
@@ -77,7 +84,7 @@ export default function AgentList() {
                     />
                   ) : (
                     <Img
-                      src="../../../public/image/img_icon_24px_search_gray_700.svg"
+                      src={searchImage}
                       alt="icon/24px / search"
                       className="cursor-pointer"
                     />
@@ -93,12 +100,7 @@ export default function AgentList() {
                 onChange={(value: Option) =>
                   handleSelectChange("active_one", value)
                 }
-                indicator={
-                  <Img
-                    src="../../../public/image/img_arrowdown_gray_600_02.svg"
-                    alt="arrow_down"
-                  />
-                }
+                indicator={<Img src={downArrow} alt="arrow_down" />}
                 placeholder="Popular"
                 className="w-[43%] md:w-full gap-px !text-gray-600_02 font-bold border-blue_gray-108_01 border border-solid"
               />
@@ -110,12 +112,7 @@ export default function AgentList() {
                 onChange={(value: Option) =>
                   handleSelectChange("active_two", value)
                 }
-                indicator={
-                  <Img
-                    src="../../../public/image/img_arrowdown_gray_600_02.svg"
-                    alt="arrow_down"
-                  />
-                }
+                indicator={<Img src={downArrow} alt="arrow_down" />}
                 placeholder="Popular"
                 className="w-[43%] md:w-full gap-px !text-gray-600_02 font-bold border-blue_gray-108_01 border border-solid"
               />
@@ -127,12 +124,7 @@ export default function AgentList() {
                 onChange={(value: Option) =>
                   handleSelectChange("active_three", value)
                 }
-                indicator={
-                  <Img
-                    src="../../../public/image/img_arrowdown_gray_600_02.svg"
-                    alt="arrow_down"
-                  />
-                }
+                indicator={<Img src={downArrow} alt="arrow_down" />}
                 placeholder="Popular"
                 className="w-[43%] md:w-full gap-px !text-gray-600_02 font-bold border-blue_gray-108_01 border border-solid"
               />
@@ -140,10 +132,7 @@ export default function AgentList() {
               <Button
                 shape="round"
                 rightIcon={
-                  <Img
-                    src="../../../public/image/img_icon_20px_search.svg"
-                    alt="icon / 20px / search"
-                  />
+                  <Img src={normalSearchImage} alt="icon / 20px / search" />
                 }
                 className="gap-2.5 font-bold min-w-[124px] h-[60px]"
               >
@@ -163,7 +152,7 @@ export default function AgentList() {
                     rightIcon={
                       <Img
                         onClick={() => removeSelectedValue(item.value)}
-                        src="../../../public/image/img_icon_16px_close.svg"
+                        src={closeImage}
                         alt="icon / 16px / close"
                       />
                     }
@@ -184,7 +173,7 @@ export default function AgentList() {
               className="flex flex-col justify-center w-full p-[13px] rounded-bl-[10px] rounded-br-[10px] border-blue_gray-100_01 border border-solid bg-white-A700 rounded-[10px]"
             >
               <Img
-                src="../../../public/image/img_rectangle_5615.png"
+                src={image1}
                 alt="bruno fernandes"
                 className="w-full md:h-auto rounded-tr-[10px] rounded-tl-[10px] object-cover"
               />

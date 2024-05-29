@@ -1,4 +1,10 @@
 import { Link } from "react-router-dom";
+import facebook from "../../../public/image/img_icon_facebook.svg";
+import instagram from "../../../public/image/img_icon_instragram.svg";
+import linkdin from "../../../public/image/img_icon_linked_in.svg";
+import twitter from "../../../public/image/img_icon_twitter.svg";
+import youtube from "../../../public/image/img_icon_youtube.svg";
+import image1 from "../../../public/image/img_real_estate_1.svg";
 import { Heading } from "../Heading";
 import { Img } from "../Img";
 import { Text } from "../Text";
@@ -11,7 +17,7 @@ export default function Footer() {
           <div className="flex flex-col items-center justify-start w-[29%] md:w-full gap-[43px]">
             <div className="flex flex-row justify-start items-start w-full gap-[11px]">
               <Img
-                src="../../../public/image/img_real_estate_1.svg"
+                src={image1}
                 alt="realestateone"
                 className="h-[40px] w-[40px]"
               />
@@ -45,31 +51,31 @@ export default function Footer() {
               <div className="flex flex-row justify-start w-full gap-3">
                 <div className="flex flex-col items-center justify-start h-[30px] w-[30px]">
                   <Img
-                    src="../../../public/image/img_icon_facebook.svg"
+                    src={facebook}
                     alt="iconfacebook"
                     className="h-[30px] w-[30px]"
                   />
                 </div>
                 <div className="flex flex-col items-center justify-start h-[30px] w-[30px]">
                   <Img
-                    src="../../../public/image/img_icon_twitter.svg"
+                    src={twitter}
                     alt="icontwitter_one"
                     className="h-[30px] w-[30px]"
                   />
                 </div>
                 <Img
-                  src="../../../public/image/img_icon_instragram.svg"
+                  src={instagram}
                   alt="iconinstragram"
                   className="h-[30px] w-[30px]"
                 />
                 <Img
-                  src="../../../public/image/img_icon_linked_in.svg"
+                  src={linkdin}
                   alt="iconlinkedin"
                   className="h-[30px] w-[30px]"
                 />
                 <div className="flex flex-col items-center justify-start h-[30px] w-[30px]">
                   <Img
-                    src="../../../public/image/img_icon_youtube.svg"
+                    src={youtube}
                     alt="iconyoutube_one"
                     className="h-[30px] w-[30px]"
                   />

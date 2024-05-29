@@ -2,6 +2,13 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button, Heading, Img, Input } from "../../components";
 import CheckBox from "../../components/Checkbox";
+import {
+  eyeHideImage,
+  framerImage,
+  googleImage,
+  lockImage,
+  userImage,
+} from "../../importImages";
 
 export default function Login() {
   const [type, setType] = useState(false);
@@ -24,7 +31,7 @@ export default function Login() {
                   Log in
                 </Heading>
                 <Button size="sm" shape="square" className="w-[30px] mt-1">
-                  <Img src="../../../public/image/img_frame_1000001678.svg" />
+                  <Img src={framerImage} />
                 </Button>
               </div>
               <Input
@@ -32,12 +39,7 @@ export default function Login() {
                 type="email"
                 name="email"
                 placeholder="user / email address"
-                prefix={
-                  <Img
-                    src="../../../public/image/img_icon_24px_user.svg"
-                    alt="icon / 24px / user"
-                  />
-                }
+                prefix={<Img src={userImage} alt="icon / 24px / user" />}
                 className="w-full gap-3.5 font-semibold border-blue_gray-100_01 border border-solid"
               />
               <Input
@@ -45,16 +47,11 @@ export default function Login() {
                 type={type ? "password" : "text"}
                 name="password"
                 placeholder="Password"
-                prefix={
-                  <Img
-                    src="../../../public/image/img_icon_20px_lock.svg"
-                    alt="icon / 20px / lock "
-                  />
-                }
+                prefix={<Img src={lockImage} alt="icon / 20px / lock " />}
                 suffix={
                   <Img
                     onClick={handleCahange}
-                    src="../../../public/image/img_icon_20px_eyehide.svg"
+                    src={eyeHideImage}
                     alt="icon / 20px / eye-hide"
                   />
                 }
@@ -88,12 +85,7 @@ export default function Login() {
             color="white A700"
             size="4xl"
             shape="round"
-            leftIcon={
-              <Img
-                src="../../../public/image/img_icon_20px_google.svg"
-                alt="icon / 20px / google"
-              />
-            }
+            leftIcon={<Img src={googleImage} alt="icon / 20px / google" />}
             className="w-full gap-2.5 sm:px-5 text-gray-900 font-bold border-gray-600_02 border border-solid"
           >
             Log in with Google

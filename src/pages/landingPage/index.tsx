@@ -1,9 +1,28 @@
+import happyEmoji from "../../../public/image/img_emoji_happy.svg";
+import eyeImage from "../../../public/image/img_eye.svg";
 import image from "../../../public/image/img_image.png";
+import image2 from "../../../public/image/img_image_1.png";
+import image3 from "../../../public/image/img_rectangle_18.png";
+import image5 from "../../../public/image/img_rectangle_19.png";
+import image6 from "../../../public/image/img_rectangle_20.png";
+import image7 from "../../../public/image/img_rectangle_20_589x521.png";
+import image4 from "../../../public/image/img_rectangle_21.png";
+import ractangleImage from "../../../public/image/img_rectangle_5591.png";
+
+import statusSearchImage from "../../../public/image/img_search_status.svg";
+import walletImage from "../../../public/image/img_wallet.svg";
 import { Button, Heading, Text } from "../../components";
 import { Img } from "../../components/Img";
 import LandingPageCard from "../../components/LandingPageCard";
 import NewsAndConsult from "../../components/NewsAndConsult";
 import SearchBar from "../../components/SearchBar";
+import SummaryOfClient from "../../components/SummarayOfClinet";
+import {
+  checkImage,
+  leftArrowImage,
+  rightArrowOrange,
+  shapeImage,
+} from "../../importImages";
 export default function LandingPage() {
   return (
     <div className="flex flex-col gap-14">
@@ -76,7 +95,7 @@ export default function LandingPage() {
           <div className=" md:w-full gap-6 grid-cols-2 sm:grid-cols-1 sm:gap-5 grid">
             <div className="flex flex-col items-start justify-center w-full md:h-auto gap-5 p-[30px] sm:p-5 bg-deep_orange-50 rounded-[20px]">
               <Img
-                src="../../../public/image/img_search_status.svg"
+                src={statusSearchImage}
                 alt="image"
                 className="h-[30px] w-[30px] mt-[7px]"
               />
@@ -93,7 +112,7 @@ export default function LandingPage() {
             </div>
             <div className="flex flex-col items-start justify-center w-full md:h-auto gap-5 p-[30px] sm:p-5 bg-deep_orange-50 rounded-[20px]">
               <Img
-                src="../../../public/image/img_eye.svg"
+                src={eyeImage}
                 alt="eye_one"
                 className="h-[30px] w- [30px] mt-[7px]"
               />
@@ -110,7 +129,7 @@ export default function LandingPage() {
             </div>
             <div className="flex flex-col items-start justify-center w-full md:h-auto gap-5 p-[30px] sm:p-5 bg-deep_orange-50 rounded-[20px]">
               <Img
-                src="../../../public/image/img_wallet.svg"
+                src={walletImage}
                 alt="wallet_one"
                 className="h-[30px] w-[30px] mt-[7px]"
               />
@@ -127,7 +146,7 @@ export default function LandingPage() {
             </div>
             <div className="flex flex-col items-start justify-center w-full md:h-auto gap-5 p-[30px] sm:p-5 bg-deep_orange-50 rounded-[20px]">
               <Img
-                src="../../../public/image/img_emoji_happy.svg"
+                src={happyEmoji}
                 alt="emojihappy_one"
                 className="h-[30px] w-[30px] mt-[7px]"
               />
@@ -149,123 +168,7 @@ export default function LandingPage() {
       {/* getStart end */}
       {/* TRANSACTION COUNT START */}
       <div className="flex flex-row justify-center w-full p-[50px] md:p-5 bg-gray-50  ">
-        <div className="flex flex-row justify-center w-full mx-[70px] md:mx-5 max-w-[1200px]">
-          <div className=" flex flex-row md:flex-col w-full gap-[100px] md:gap-10">
-            <div className="   flex flex-col items-center justify-center w-[19%] md:w-full gap-[18px]">
-              <Button
-                color="white_A700"
-                size="3xl"
-                shape="circle"
-                className="w- [60px]"
-              >
-                <Img src="../../../public/image/img_frame.svg" />
-              </Button>
-              <div className="flex flex-col items-start justify-start w-full gap-[13px]">
-                <Heading
-                  size="5xl"
-                  as="h2"
-                  className="tracking-[-0.92px] text-[46px] font-extrabold"
-                >
-                  $15.4M
-                </Heading>
-                <Heading
-                  size="lg"
-                  as="h3"
-                  className="!text-blue_gray-600 tracking-[-0.40px] text-xl font-semibold leading-[140%]"
-                >
-                  <>
-                    Owned from
-                    <br />
-                    Properties transactions
-                  </>
-                </Heading>
-              </div>
-            </div>
-            <div className="flex flex-col items-start justify-start w-[19%] md:w-full gap-[18px]">
-              <Button
-                color="white_A700"
-                size="3xl"
-                shape="circle"
-                className="w-[60px]"
-              >
-                <Img src="../../../public/image/img_frame_orange_a700.svg" />
-              </Button>
-              <div className="flex flex-col items-start justify-start w-full gap-[13px]">
-                <Heading
-                  size="5xl"
-                  as="h4"
-                  className="tracking-[-0.92px] text-[46px] font-extrabold"
-                >
-                  25K+
-                </Heading>
-
-                <Heading
-                  size="lg"
-                  as="h5"
-                  className="!text-blue_gray-600 tracking-[-0.40px] text-xl font-semibold leading-[140%]"
-                >
-                  Properties for Buy & sell Successfully
-                </Heading>
-              </div>
-            </div>
-
-            <div className="flex flex-col items-start justify-start w-[19%] md:w-full gap-[18px]">
-              <Button
-                color="white_A700"
-                size="3xl"
-                shape="circle"
-                className="w-[60px]"
-              >
-                <Img src="../../../public/image/img_icon.svg" />
-              </Button>
-              <div className="flex flex-col items-start justify-start w-full gap-[13px]">
-                <Heading
-                  size="5xl"
-                  as="h6"
-                  className="tracking-[-0.92px] text-[46px] font-extrabold"
-                >
-                  500
-                </Heading>
-                <Heading
-                  size="lg"
-                  as="h5"
-                  className="!text-blue_gray-600 tracking-[-0.40px] text-xl font-semibold leading-[140%]"
-                >
-                  <>
-                    Daily completed <br />
-                    transactions
-                  </>
-                </Heading>
-              </div>
-            </div>
-            <div className="flex flex-col items-start justify-start w-[19%] md:w-full mb-[26px] gap-[18px]">
-              <Button
-                color="white_A700"
-                size="3xl"
-                shape="circle"
-                className="w-[60px]"
-              >
-                <Img src="../../../public/image/img_icon_orange_a700.svg" />
-              </Button>
-              <div className="flex flex-col items-start justify-start w-full gap-4">
-                <Heading
-                  size="5xl"
-                  as="h1"
-                  className="tracking-[-0.92px] text-[46px] font-extrabold"
-                >
-                  600+
-                </Heading>
-                <Heading
-                  size="lg"
-                  as="h5"
-                  className="!text-blue_gray-600 tracking-[-0.40px] text-xl font-semibold"
-                >
-                  Reagular Clients
-                </Heading>
-              </div>
-            </div>
-          </div>
-        </div>
+        <SummaryOfClient />
       </div>
       {/* TRANSACTION COUNT START END */}
       {/* FEATURE PROPERTIES START   */}
@@ -331,29 +234,29 @@ export default function LandingPage() {
 
           <div className=" grid justify-center w-full gap-6 grid-cols-3 md:grid-cols-2 md:gap-5 sm:grid-cols-1 ">
             <LandingPageCard
-              imageOne="../../../public/image/img_image_1.png"
+              imageOne={image2}
               className="bg-white-A700 border rounded-[10px] p-4"
             />
             <LandingPageCard
-              imageOne="../../../public/image/img_image_2.png"
-              className="bg-white-A700 border rounded-[10px] p-4"
-            />
-
-            <LandingPageCard
-              imageOne="../../../public/image/img_image_3.png"
+              imageOne={image2}
               className="bg-white-A700 border rounded-[10px] p-4"
             />
 
             <LandingPageCard
-              imageOne="../../../public/image/img_image_4.png"
+              imageOne={image2}
+              className="bg-white-A700 border rounded-[10px] p-4"
+            />
+
+            <LandingPageCard
+              imageOne={image2}
               className="bg-white-A700 border rounded-[10px] p-4"
             />
             <LandingPageCard
-              imageOne="i../../../public/image/img_image_5.png"
+              imageOne={image2}
               className="bg-white-A700 border rounded-[10px] p-4"
             />
             <LandingPageCard
-              imageOne="../../../public/image/img_image_1.png"
+              imageOne={image2}
               className="bg-white-A700 border rounded-[10px] p-4"
             />
           </div>
@@ -395,24 +298,24 @@ export default function LandingPage() {
             <div className="flex flex-row sm:flex-col justify-start w-[47%] md:w-full gap-5 sm:gap-5">
               <div className="flex flex-col items-center justify-start w- [49%] sm:w-full gap-4">
                 <Img
-                  src="../../../public/image/img_rectangle_18.png"
+                  src={image3}
                   alt="image_two"
                   className="w-full md:h-auto sm:w-full object-cover rounded-[10px]"
                 />
                 <Img
-                  src="../../../public/image/img_rectangle_21.png"
+                  src={image4}
                   alt="image_three"
                   className="w-full md:h-auto sm:w-full object-cover rounded-[10px]"
                 />
               </div>
               <div className="flex flex-col items-center justify-start w- [49%] sm:w-full gap-4">
                 <Img
-                  src="../../../public/image/img_rectangle_19.png"
+                  src={image5}
                   alt="image_four"
                   className="w-full md:h-auto sm:w-full object-cover rounded-[10px]"
                 />
                 <Img
-                  src="../../../public/image/img_rectangle_20.png"
+                  src={image6}
                   alt="image_five"
                   className="w-full md:h-auto sm:w-full object-cover rounded-[10px]"
                 />
@@ -421,7 +324,7 @@ export default function LandingPage() {
           </div>
           <div className="flex flex-row md:flex-col justify-between items-center w-full md:gap-10">
             <Img
-              src="../../../public/image/img_rectangle_20_589x521.png"
+              src={image7}
               alt="image_six"
               className="w-[44%] md:w-full md:h- [589px] object-cover rounded-[10px]"
             />
@@ -448,7 +351,7 @@ export default function LandingPage() {
                 <div className="flex flex-col items-center justify-start w-full gap-3">
                   <div className="flex flex-row justify-start items-center w-full gap-3.5 py-0.5 sm:gap-3.5">
                     <Img
-                      src="../../../public/image/img_icon_check.svg"
+                      src={checkImage}
                       alt="iconcheck_one"
                       className="h-[24px] w-[24px]"
                     />
@@ -462,7 +365,7 @@ export default function LandingPage() {
                   </div>
                   <div className="flex flex-row justify-start items-center w-full gap-3.5 sm:gap-3.5">
                     <Img
-                      src="../../../public/image/img_icon_check.svg"
+                      src={checkImage}
                       alt="iconcheck_three"
                       className="h-[24px] w-[24px]"
                     />
@@ -476,7 +379,7 @@ export default function LandingPage() {
                   </div>
                   <div className="flex flex-row justify-start items-center w-full gap-3.5 sm:gap-3.5">
                     <Img
-                      src="../../../public/image/img_icon_check.svg"
+                      src={checkImage}
                       alt="iconcheck_five"
                       className="h-[24px] w-[24px]"
                     />
@@ -507,7 +410,7 @@ export default function LandingPage() {
           <div className="flex flex-row justify-center w-full md:px-5 max-w-[1010px]">
             <div className="flex flex-row md:flex-col justify-between w-full md:gap-10">
               <Img
-                src="../../../public/image/img_rectangle_5591.png"
+                src={ractangleImage}
                 alt="image_seven"
                 className="w-[46%] md:w-full md:h-[344px] object-cover rounded-lg"
               />
@@ -531,7 +434,7 @@ export default function LandingPage() {
                       </Heading>
                     </div>
                     <Img
-                      src="../../../public/image/img_shape.svg"
+                      src={shapeImage}
                       alt="shape_one"
                       className="h-[51px]"
                     />
@@ -554,7 +457,7 @@ export default function LandingPage() {
         <div className="flex flex-row justify-end   w-full pl-14 pr-[200px] gap-[30px] md:gap-10 md:px-5">
           <div className="flex flex-row  items-center   gap-2">
             <Img
-              src="../../../public/image/img_icon_24px_v_gray_600.svg"
+              src={leftArrowImage}
               alt="icon24pxv_three"
               className="h-[24px] w-[24px]"
             />
@@ -575,7 +478,7 @@ export default function LandingPage() {
               Next
             </Heading>
             <Img
-              src="../../../public/image/img_icon_24px_v.svg"
+              src={rightArrowOrange}
               alt="icon24pxv_five"
               className="h-[24px] w-[24px]"
             />

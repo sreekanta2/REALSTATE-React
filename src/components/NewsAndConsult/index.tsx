@@ -1,3 +1,7 @@
+import image1 from "../../../public/image/img_image_350x384.png";
+import image2 from "../../../public/image/img_image_6.png";
+import image3 from "../../../public/image/img_image_7.png";
+import { rightArrowOrange } from "../../importImages";
 import { Button } from "../Button";
 import { Heading } from "../Heading";
 import { Img } from "../Img";
@@ -26,7 +30,7 @@ export default function NewsAndConsult() {
                 Explore All
               </Heading>
               <Img
-                src="../../../public/image/img_icon_24px_v.svg"
+                src={rightArrowOrange}
                 alt="icon24pxv_seven"
                 className="h-[24px] w- [24px]"
               />
@@ -35,7 +39,7 @@ export default function NewsAndConsult() {
           <div className="flex flex-row md:flex-col w-full gap-6">
             <div className="flex flex-col items-center justify-start w-[32%] md:w-full gap-6">
               <Img
-                src="../../../public/image/img_image_350x384.png"
+                src={image1}
                 alt="image"
                 className="w-full md:h-auto sm:w-full object-cover rounded-[10px]"
               />
@@ -55,7 +59,7 @@ export default function NewsAndConsult() {
                   Read the Article
                 </Heading>
                 <Img
-                  src="../../../public/image/img_icon_24px_v_deep_orange_400.svg"
+                  src={rightArrowOrange}
                   alt="icon24pxv_one"
                   className="h-[24px] w-[24px]"
                 />
@@ -63,7 +67,7 @@ export default function NewsAndConsult() {
             </div>
             <div className="flex flex-col items-center justify-start w-[32%] md:w-full gap-6">
               <Img
-                src="../../../public/image/img_image_6.png"
+                src={image2}
                 alt="image_one"
                 className="w-full md:h-auto sm:w-full object-cover rounded-[10px]"
               />
@@ -84,7 +88,7 @@ export default function NewsAndConsult() {
                     Read the Article
                   </Heading>
                   <Img
-                    src="../../../public/image/img_icon_24px_v_deep_orange_400.svg"
+                    src={rightArrowOrange}
                     alt="icon24pxv_one"
                     className="h-[24px] w-[24px]"
                   />
@@ -93,7 +97,7 @@ export default function NewsAndConsult() {
             </div>
             <div className="flex flex-col items-center justify-start w-[32%] md:w-full gap-6">
               <Img
-                src="../../../public/image/img_image_7.png"
+                src={image3}
                 alt="image_one"
                 className="w-full md:h-auto sm:w-full object-cover rounded-[10px]"
               />
@@ -114,7 +118,7 @@ export default function NewsAndConsult() {
                     Read the Article
                   </Heading>
                   <Img
-                    src="../../../public/image/img_icon_24px_v_deep_orange_400.svg"
+                    src={rightArrowOrange}
                     alt="icon24pxv_one"
                     className="h-[24px] w-[24px]"
                   />

@@ -1,11 +1,9 @@
+import membersImage from "../../../public/image/img_rectangle_5597.png";
 import { Heading } from "../Heading";
 import { Img } from "../Img";
 import { Text } from "../Text";
 
-export default function TeamCard({
-  imageOne = "../../../public/image/img_rectangle_5597.png",
-  ...props
-}) {
+export default function TeamCard({ imageOne = membersImage, ...props }) {
   return (
     <div {...props}>
       <Img

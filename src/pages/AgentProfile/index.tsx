@@ -1,8 +1,23 @@
 import { Link } from "react-router-dom";
+import coverImage from "../../../public/image/img_cover_image.png";
+
+import image1 from "../../../public/image/img_ellipse_2695.png";
+import image2 from "../../../public/image/img_image_1.png";
+import rantangleImage from "../../../public/image/img_rectangle_5599_150x150.png";
 import { Button, Heading, Img, Text } from "../../components";
 import LandingPageCard from "../../components/LandingPageCard";
 import { RatingBar } from "../../components/RatingBar";
-
+import {
+  emailImage,
+  facebookImage,
+  linkdinImage,
+  phoneImage,
+  plusImage,
+  rightArrowNormal,
+  rssImage,
+  thinRightArrow,
+  twitterImage,
+} from "../../importImages";
 export default function AgentProfile() {
   const reviews = [1, 2, 3, 4, 5];
   return (
@@ -12,7 +27,7 @@ export default function AgentProfile() {
           <div className="flex flex-col items-center justify-start w-full">
             <div className="flex flex-row justify-center w-full">
               <Img
-                src="../../../public/image/img_cover_image.png"
+                src={coverImage}
                 alt="coverimage_one"
                 className="w-full md:h-[250px] object-cover"
               />
@@ -20,7 +35,7 @@ export default function AgentProfile() {
             <div className="flex flex-col items-center justify-start w-full mt-[-46px] gap-[58px]">
               <div className="flex flex-row md:flex-col justify-start items-center w-full gap-[30px] md:gap-5 md:px-5 max-w-[1160px]">
                 <Img
-                  src="../../../public/image/img_rectangle_5599_150xl50.png"
+                  src={rantangleImage}
                   alt="image"
                   className="w-[150px] md:h-auto object-cover rounded-[10px]"
                 />
@@ -49,7 +64,7 @@ export default function AgentProfile() {
                     <div className="flex flex-col items-center justify-start w-[49%] md:w-full gap-2">
                       <div className="flex flex-row justify-start items-center w-full gap-[13px] py-0.5">
                         <Img
-                          src="../../../public/image/img_icon_24px_call.svg"
+                          src={phoneImage}
                           alt="icon24pxcall"
                           className="h-[24px] w- [24px]"
                         />
@@ -63,7 +78,7 @@ export default function AgentProfile() {
                       </div>
                       <div className="flex flex-row justify-start items-center w-full gap-3 py-0.5">
                         <Img
-                          src="../../../public/image/img_icon_24px_email_gray_900.svg"
+                          src={emailImage}
                           alt="icon24pxemail"
                           className="h-[24px] w-[24px]"
                         />
@@ -124,26 +139,29 @@ export default function AgentProfile() {
                     </Button>
                   </div>
                   <div className="justify-center w-full gap-6 grid-cols-3 md:grid-cols-2 md:gap-5 sm:grid-cols-1 grid">
-                    <LandingPageCard className="flex flex-col items-center justify-start w-full" />
                     <LandingPageCard
-                      imageOne="../../../public/image/img_image_1.png"
+                      imageOne={image2}
+                      className="flex flex-col items-center justify-start w-full"
+                    />
+                    <LandingPageCard
+                      imageOne={image2}
                       className="flex flex-col items-center justify-start w-full"
                     />
 
                     <LandingPageCard
-                      imageOne="../../../public/image/img_image_2.png"
+                      imageOne={image2}
                       className="flex flex-col items-center justify-start w-full"
                     />
                     <LandingPageCard
-                      imageOne="../../../public/image/img_image_3.png"
+                      imageOne={image2}
                       className="flex flex-col items-center justify-start w-full"
                     />
                     <LandingPageCard
-                      imageOne="../../../public/image/img_image_4.png"
+                      imageOne={image2}
                       className="flex flex-col items-center justify-start w-full"
                     />
                     <LandingPageCard
-                      imageOne="../../../public/image/img_image_5.png"
+                      imageOne={image2}
                       className="flex flex-col items-center justify-start w-full"
                     />
                   </div>
@@ -195,8 +213,8 @@ export default function AgentProfile() {
                       variant="outline"
                       shape="round"
                       rightIcon={
-                        <img
-                          src="../../../public/image/img_icon_16px_arrow_right.svg"
+                        <Img
+                          src={rightArrowNormal}
                           alt="icon / 16px / arrow right"
                         />
                       }
@@ -216,7 +234,7 @@ export default function AgentProfile() {
             <div className="flex flex-col items-center justify-start w-full gap-6">
               <div className="flex flex-row sm:flex-col justify-start items-center w-full gap-[30px] sm:gap-5">
                 <Img
-                  src="../../../public/image/img_rectangle_5599.png"
+                  src={image1}
                   alt="image_one"
                   className="w-[182px] md:h-auto object-cover rounded-[10px]"
                 />
@@ -241,7 +259,7 @@ export default function AgentProfile() {
                   </div>
                   <div className="flex flex-row justify-start items-center gap-[13px] py-0.5">
                     <Img
-                      src="../../../public/image/img_icon_24px_call.svg"
+                      src={phoneImage}
                       alt="icon24pxcall"
                       className="h-[24px] w-[24px]"
                     />
@@ -255,7 +273,7 @@ export default function AgentProfile() {
                   </div>
                   <div className="flex flex-row justify-start items-center gap-3 py-0.5">
                     <Img
-                      src="../../../public/image/img_icon_24px_email_gray_900.svg"
+                      src={emailImage}
                       alt="icon24pxemail"
                       className="h-[24px] w-[24px]"
                     />
@@ -267,12 +285,11 @@ export default function AgentProfile() {
               </div>
               <Text as="p" className="text-lg font-normal leading-[180%]">
                 <>
-                  A slider is great way to display a slideshow featuring
-                  ../../../public/image or videos, usually on your
-                  homepage.Adding sliders to your site is no longer difficult.
-                  You don't have to know coding anymore. Just use a slider
-                  widget and it will automatically insert the slider on your web
-                  page.
+                  A slider is great way to display a slideshow featuring or
+                  videos, usually on your homepage.Adding sliders to your site
+                  is no longer difficult. You don't have to know coding anymore.
+                  Just use a slider widget and it will automatically insert the
+                  slider on your web page.
                   <br />
                   One of the best ways to add beautiful sliders with excellent
                   responsiveness and advanced options.{" "}
@@ -394,27 +411,27 @@ export default function AgentProfile() {
               </Heading>
               <div className="flex flex-row justify-start gap-4">
                 <Img
-                  src="../../../public/image/img_social_icon_facebook.svg"
+                  src={facebookImage}
                   alt="socialicon_one"
                   className="h-[30px] w-[30px]"
                 />{" "}
                 <Img
-                  src="../../../public/image/img_social_icon_linkedin.svg"
+                  src={linkdinImage}
                   alt="socialicon"
                   className="h-[30px] w-[30px]"
                 />
                 <Img
-                  src="../../../public/image/img_social_icon_twitter.svg"
+                  src={twitterImage}
                   alt="socialicon_five"
                   className="h-[30px] w-[30px]"
                 />
                 <Img
-                  src="../../../public/image/img_social_icon_youtube.svg"
+                  src={twitterImage}
                   alt="socialicon"
                   className="h-[30px] w-[30px]"
                 />
                 <Img
-                  src="../../../public/image/img_social_icon_rss.svg"
+                  src={rssImage}
                   alt="socialiconrss"
                   className="h-[30px] w-[30px]"
                 />
@@ -437,12 +454,7 @@ export default function AgentProfile() {
               <Button
                 size="4xl"
                 shape="round"
-                rightIcon={
-                  <Img
-                    src="../../../public/image/img_icon_24px_plus_white_a700.svg"
-                    alt="icon/24px / plus"
-                  />
-                }
+                rightIcon={<Img src={plusImage} alt="icon/24px / plus" />}
                 className="gap-2.5 font-bold min-w-[190px]"
               >
                 Write a Reveiw
@@ -493,7 +505,7 @@ export default function AgentProfile() {
                     </div>
                     <div className="flex flex-row md:flex-col justify-start items-center w-full gap-4 md:gap-5">
                       <Img
-                        src="../../../public/image/img_ellipse_2695.png"
+                        src={image1}
                         alt="taylor_wilson"
                         className="h-[80px] w-[80px] md:h-auto rounded-[50%]"
                       />
@@ -523,7 +535,7 @@ export default function AgentProfile() {
               color="gray_600_02"
               variant="outline"
               shape="round"
-              rightIcon={<Img src="../../../public/image/img_arrow_down.svg" />}
+              rightIcon={<Img src={thinRightArrow} />}
               className="gap-1 font-semibold min-w-[120px]    mb-6 sm:min-w-full"
             >
               See more

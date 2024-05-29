@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { CloseSVG } from "../../assets/images";
 import { Heading, Img, Input, Text } from "../../components";
+import { searchImage } from "../../importImages";
 
 export default function FAQ() {
   const [searchText, setSearchText] = useState("");
@@ -24,7 +25,7 @@ export default function FAQ() {
           </Heading>
           <div className="flex flex-col items-center justify-start w-full gap-[25px]">
             <Input
-              size="xs"
+              size="md"
               shape="square"
               type="text"
               name="search"
@@ -33,7 +34,7 @@ export default function FAQ() {
               handleChange={handleInputChange}
               prefix={
                 <Img
-                  src="../../../public/image/img_icon_24px_search.svg"
+                  src={searchImage}
                   alt="icon / 24px / search"
                   className="cursor-pointer"
                 />

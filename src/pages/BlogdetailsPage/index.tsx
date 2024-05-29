@@ -1,9 +1,17 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { createColumnHelper } from "@tanstack/react-table";
 import React from "react";
+import profilePicture from "../../../public/image/img_profile_picture.png";
+import image1 from "../../../public/image/img_rectangle_5618_550x996.png";
 import { Heading, Img, Text } from "../../components";
 import { ReactTable } from "../../components/ReactTable";
-
+import {
+  facebookOpacityImage,
+  linkdinOpacityImage,
+  radditOpacityImage,
+  twitterOpacityImage,
+  unionImage,
+} from "../../importImages";
 const tableData = [
   {
     fullname: "Zakir Hossen",
@@ -122,7 +130,7 @@ export default function BlogDetailsPage() {
               <div className="flex flex-row md:flex-col justify-start items-center w-full gap-4 md:gap-5">
                 <div className="flex flex-col items-center justify-start w-[88%] md:w-full gap-6">
                   <Img
-                    src="../../../public/image/img_rectangle_5618_550x996.png"
+                    src={image1}
                     alt="image"
                     className="w-full md:h-[550px] object-cover rounded-[10px]"
                   />
@@ -150,13 +158,13 @@ export default function BlogDetailsPage() {
                 <div className="flex flex-col items-center justify-start w-[11%] md:w-full">
                   <div className="flex flex-col items-start justify-start w-full gap-4">
                     <Img
-                      src="../../../public/image/img_facebook.svg"
+                      src={facebookOpacityImage}
                       alt="facebook_one"
                       className="h-[32px] w-[32px]"
                     />
                     <div className="flex flex-row justify-start items-center w-full gap-1">
                       <Img
-                        src="../../../public/image/img_linkedin.svg"
+                        src={linkdinOpacityImage}
                         alt="linkedin_one"
                         className="h-[32px] w-[32px]"
                       />
@@ -164,7 +172,7 @@ export default function BlogDetailsPage() {
                         <div className="flex flex-row justify-start w-full">
                           <div className="h-[25px] w-full sm:w-full relative">
                             <Img
-                              src="../../../public/image/img_union.svg"
+                              src={unionImage}
                               alt="union_one"
                               className="justify-center h-[25px] left-0 bottom-0 right-0 top-0 m-auto absolute"
                             />
@@ -180,12 +188,12 @@ export default function BlogDetailsPage() {
                       </div>
                     </div>
                     <Img
-                      src="../../../public/image/img_twitte.svg"
+                      src={twitterOpacityImage}
                       alt="twitte_one"
                       className="h-[32px] w-[32px]"
                     />
                     <Img
-                      src="../../../public/image/img_reddit.svg"
+                      src={radditOpacityImage}
                       alt="reddit_one"
                       className="h-[32px] w-[32px]"
                     />
@@ -317,7 +325,7 @@ export default function BlogDetailsPage() {
                   </Text>
                 </div>
                 <Img
-                  src="../../../public/image/img_rectangle_5619_532x996.png"
+                  src={image1}
                   alt="image_one"
                   className="w-full md:h-auto sm:w-full object-cover rounded-[10px]"
                 />
@@ -559,7 +567,7 @@ export default function BlogDetailsPage() {
                   </Heading>
                   <div className="flex flex-row sm:flex-col justify-start items-center w-full gap-6 sm:gap-5">
                     <Img
-                      src="../../../public/image/img_profile_picture.png"
+                      src={profilePicture}
                       alt="profilepicture"
                       className="h-[100px] w-[100px] md:h-auto rounded-[50%]"
                     />

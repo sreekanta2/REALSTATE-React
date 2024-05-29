@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button, Heading, Img, Input, Text } from "../../components";
+import { closeImage, eyeHideImage, lockImage } from "../../importImages";
 
 export default function NewPassword() {
   return (
@@ -18,7 +19,7 @@ export default function NewPassword() {
                     New Password
                   </Heading>
                   <Button size="sm" shape="square" className="w-[30px]">
-                    <Img src="../../../public/image/img_icon_24px_close.svg" />
+                    <Img src={closeImage} />
                   </Button>
                 </div>
                 <Text as="p" className="Itext-gray-900 text-lg font-normal">
@@ -30,18 +31,8 @@ export default function NewPassword() {
                 type="password"
                 name="newpassword"
                 placeholder="Password"
-                prefix={
-                  <img
-                    src="../../../public/image/img_icon_20px_lock.svg"
-                    alt="icon/20px/lock"
-                  />
-                }
-                suffix={
-                  <img
-                    src="../../../public/image/img_icon_20px_eyehide.svg"
-                    alt="icon / 20px / eye-hide"
-                  />
-                }
+                prefix={<Img src={lockImage} alt="icon/20px/lock" />}
+                suffix={<Img src={eyeHideImage} alt="icon / 20px / eye-hide" />}
                 className="w-full gap-3.5 font-semibold border-blue_gray-108_01 border border-solid"
               />
               <Input
@@ -49,18 +40,8 @@ export default function NewPassword() {
                 type="password"
                 name="newpassword"
                 placeholder="Re-New Password"
-                prefix={
-                  <img
-                    src="../../../public/image/img_icon_20px_lock.svg"
-                    alt="icon/20px/lock"
-                  />
-                }
-                suffix={
-                  <img
-                    src="../../../public/image/img_icon_20px_eyehide.svg"
-                    alt="icon/20px / eye-hide"
-                  />
-                }
+                prefix={<Img src={lockImage} alt="icon/20px/lock" />}
+                suffix={<Img src={eyeHideImage} alt="icon/20px / eye-hide" />}
                 className="w-full gap-3.5 font-semibold border-blue_gray-100_01 border border-solid"
               />
             </div>

@@ -1,5 +1,15 @@
 import { Button, Heading, Img, Input, Text } from "../../components";
 import { TextArea } from "../../components/TextArea";
+import {
+  emailImage,
+  facebookImage,
+  linkdinImage,
+  phoneImage,
+  rssImage,
+  twitterImage,
+  userImage,
+  youtubeImage,
+} from "../../importImages";
 
 export default function ContactPagePage() {
   return (
@@ -42,12 +52,7 @@ export default function ContactPagePage() {
                         type="text"
                         name="message"
                         placeholder="Full Name"
-                        prefix={
-                          <Img
-                            src="../../../public/image/img_icon_24px_user.svg"
-                            alt="icon/24px/user"
-                          />
-                        }
+                        prefix={<Img src={userImage} alt="icon/24px/user" />}
                         className="w-full gap-3.5 font-semibold border-blue_gray-100_01 border border-solid"
                       />
                       <Input
@@ -55,12 +60,7 @@ export default function ContactPagePage() {
                         type="email"
                         name="email"
                         placeholder="Email Address"
-                        prefix={
-                          <img
-                            src="../../../public/image/img_icon_24px_email.svg"
-                            alt="icon/24px/ email"
-                          />
-                        }
+                        prefix={<img src={emailImage} alt="icon/24px/ email" />}
                         className="w-full gap-3.5 font-semibold border-blue gray-100 01 border border-solid"
                       />
                       <Input
@@ -68,12 +68,7 @@ export default function ContactPagePage() {
                         type="text"
                         name="phoneNumber"
                         placeholder="Phone Number"
-                        prefix={
-                          <img
-                            src="../../../public/image/img_icon_20px_call.svg"
-                            alt="icon/24px/call"
-                          />
-                        }
+                        prefix={<img src={phoneImage} alt="icon/24px/call" />}
                         className="w-full gap-3.5 font-semibold border-blue_gray-100_01 border border-solid"
                       />
                       <TextArea
@@ -118,7 +113,7 @@ export default function ContactPagePage() {
                       <div className="flex flex-col items-center justify-start w-full gap-2.5">
                         <div className="flex flex-row justify-start items-center < w-full gap-[13px] py-0.5">
                           <Img
-                            src="../../../public/image/img_icon_20px_call.svg"
+                            src={phoneImage}
                             alt="icon24pxcall"
                             className="h-[24px] w-[24px]"
                           />
@@ -132,7 +127,7 @@ export default function ContactPagePage() {
                         </div>
                         <div className="flex flex-row justify-start items-center w-full gap-3 ру-0.5">
                           <Img
-                            src="../../../public/image/img_icon_24px_email.svg"
+                            src={emailImage}
                             alt="icon24pxemail"
                             className="h-[24px] w-[24px]"
                           />
@@ -156,27 +151,27 @@ export default function ContactPagePage() {
                       </Heading>
                       <div className="flex flex-row justify-start gap-4">
                         <Img
-                          src="../../../public/image/img_social_icon_facebook.svg"
+                          src={facebookImage}
                           alt="socialicon_one"
                           className="h-[30px] w-[30px]"
                         />
                         <Img
-                          src="../../../public/image/img_social_icon_linkedin.svg"
+                          src={linkdinImage}
                           alt="socialicon"
                           className="h-[30px] w-[38px]"
                         />
                         <Img
-                          src="../../../public/image/img_social_icon_twitter.svg"
+                          src={twitterImage}
                           alt="socialicon_five"
                           className="h-[30px] w-[30px]"
                         />
                         <Img
-                          src="../../../public/image/img_social_icon_youtube.svg"
+                          src={youtubeImage}
                           alt="socialicon"
                           className="h-[30px] w-[30px]"
                         />
                         <Img
-                          src="../../../public/image/img_social_icon_rss.svg"
+                          src={rssImage}
                           alt="socialiconrss"
                           className="h-[30px] w-[30px]"
                         />

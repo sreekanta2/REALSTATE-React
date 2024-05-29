@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button, Heading, Img, Text } from "../../components";
+import { closeImage } from "../../importImages";
 
 export default function Otp() {
   return (
@@ -19,7 +20,7 @@ export default function Otp() {
                     Enter OTP
                   </Heading>
                   <Button size="sm" shape="square" className="w- [30px]">
-                    <Img src="../../../public/image/img_icon_24px_close.svg" />
+                    <Img src={closeImage} />
                   </Button>
                 </div>
                 <Text as="p" className="text-gray-900 text-lg font-normal">

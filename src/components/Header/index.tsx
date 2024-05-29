@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import searchbar from "../../../public/image/img_icon_24px_search.svg";
 import logo from "../../../public/image/img_real_estate_1.svg";
 import { CloseSVG } from "../../assets/images";
 import { Button } from "../Button";
@@ -91,7 +92,7 @@ export default function Header({ ...props }: Props) {
             handleChange={handleInputChange}
             prefix={
               <Img
-                src="../../../public/image/img_icon_24px_search.svg"
+                src={searchbar}
                 alt="icon / 24px / search"
                 className="cursor-pointer"
               />

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button, Heading, Img, Input, Text } from "../../components";
+import { closeImage, emailImage } from "../../importImages";
 
 export default function ResetPassword() {
   return (
@@ -17,7 +18,7 @@ export default function ResetPassword() {
                   Reset Password
                 </Heading>
                 <Button size="sm" shape="square" className="w- [38px]">
-                  <Img src="../../../public/image/img_icon_24px_close.svg" />
+                  <Img src={closeImage} />
                 </Button>
               </div>
               <Text
@@ -33,12 +34,7 @@ export default function ResetPassword() {
               type="email"
               name="password"
               placeholder="user / email address"
-              prefix={
-                <Img
-                  src="../../../public/image/img_icon_24px_email.svg"
-                  alt="icon / 24px / email"
-                />
-              }
+              prefix={<Img src={emailImage} alt="icon / 24px / email" />}
               className="w-full gap-3.5 font-semibold border-blue_gray-108_01 border border-solid"
             />
           </div>

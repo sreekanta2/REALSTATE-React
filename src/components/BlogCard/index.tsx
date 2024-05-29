@@ -1,4 +1,6 @@
 import { Link, useParams } from "react-router-dom";
+import image1 from "../../../public/image/img_icon_24px_v_gray_600_02.svg";
+import ractangule from "../../../public/image/img_rectangle_5617_350x384.png";
 import { Button } from "../Button";
 import { Heading } from "../Heading";
 import { Img } from "../Img";
@@ -10,7 +12,7 @@ export default function BlogCard() {
       <div className="flex flex-col items-center justify-start w-full gap-3">
         <div className="overflow-hidden rounded-[10px]">
           <Img
-            src="../../../public/image/img_rectangle_5617_350x384.png"
+            src={ractangule}
             alt="image_one"
             className="w-full md:h-auto sm:w-full  object-cover hover:scale-125 duration-150"
           />{" "}
@@ -66,11 +68,7 @@ export default function BlogCard() {
           Continue Reading
         </Link>
 
-        <Img
-          src="../../../public/image/img_icon_24px_v_gray_600_02.svg"
-          alt="continue"
-          className="h-[24px] w-[24px]"
-        />
+        <Img src={image1} alt="continue" className="h-[24px] w-[24px]" />
 
         {/* <BlogPageColumnactive className="flex flex-col items-center justify-start w-full gap-6" /> */}
       </div>

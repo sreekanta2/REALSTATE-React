@@ -1,5 +1,12 @@
-import { Button, Heading, Img, Text } from "../../components";
+import ractangle6image from "../../../public/image/img_rectangle_20_589x496.png";
+import ractangle5image from "../../../public/image/img_rectangle_20_589x531.png";
+import ractangle1image from "../../../public/image/img_rectangle_5592.png";
+import ractangle2image from "../../../public/image/img_rectangle_5593.png";
+import ractangle4image from "../../../public/image/img_rectangle_5594.png";
+import ractangle3image from "../../../public/image/img_rectangle_5595.png";
+import { Heading, Img, Text } from "../../components";
 import NewsAndConsult from "../../components/NewsAndConsult";
+import SummaryOfClient from "../../components/SummarayOfClinet";
 import TeamCard from "../../components/TeamCard";
 
 export default function AboutPage() {
@@ -36,24 +43,24 @@ export default function AboutPage() {
             <div className="flex flex-col items-center justify-start w-full gap-6">
               <div className="flex flex-row sm:flex-col justify-start w-full gap-6 sm:gap-5">
                 <Img
-                  src="../../../public/image/img_rectangle_5592.png"
+                  src={ractangle1image}
                   alt="image"
                   className="w-[66%] md:h-auto sm:w-full object-cover rounded-[10px]"
                 />
                 <Img
-                  src="../../../public/image/img_rectangle_5593.png"
+                  src={ractangle2image}
                   alt="image_one"
                   className="w-[32%] md:h-auto sm:w-full object-cover rounded-[10px]"
                 />
               </div>
               <div className="flex flex-row sm:flex-col justify-start w-full gap-6 sm:gap-5">
                 <Img
-                  src="../../../public/image/img_rectangle_5595.png"
+                  src={ractangle3image}
                   alt="image_two"
                   className="w-[32%] md:h-auto sm:w-full object-cover rounded-[10px]"
                 />
                 <Img
-                  src="../../../public/image/img_rectangle_5594.png"
+                  src={ractangle4image}
                   alt="image_three"
                   className="w-[66%] md:h-auto sm:w-full object-cover rounded-[10px]"
                 />
@@ -64,123 +71,7 @@ export default function AboutPage() {
         {/* banner end */}
         {/* TRANSACTION COUNT START */}
         <div className="flex flex-row justify-center w-full p-[50px] md:p-5 bg-gray-50">
-          <div className="flex flex-row justify-center w-full mx-[70px] md:mx-5 max-w-[1200px]">
-            <div className=" flex flex-row md:flex-col w-full gap-[100px] md:gap-10">
-              <div className="   flex flex-col items-center justify-center w-[19%] md:w-full gap-[18px]">
-                <Button
-                  color="white_A700"
-                  size="3xl"
-                  shape="circle"
-                  className="w- [60px]"
-                >
-                  <Img src="../../../public/image/img_frame.svg" />
-                </Button>
-                <div className="flex flex-col items-start justify-start w-full gap-[13px]">
-                  <Heading
-                    size="5xl"
-                    as="h2"
-                    className="tracking-[-0.92px] text-[46px] font-extrabold"
-                  >
-                    $15.4M
-                  </Heading>
-                  <Heading
-                    size="lg"
-                    as="h3"
-                    className="!text-blue_gray-600 tracking-[-0.40px] text-xl font-semibold leading-[140%]"
-                  >
-                    <>
-                      Owned from
-                      <br />
-                      Properties transactions
-                    </>
-                  </Heading>
-                </div>
-              </div>
-              <div className="flex flex-col items-start justify-start w-[19%] md:w-full gap-[18px]">
-                <Button
-                  color="white_A700"
-                  size="3xl"
-                  shape="circle"
-                  className="w-[60px]"
-                >
-                  <Img src="../../../public/image/img_frame_orange_a700.svg" />
-                </Button>
-                <div className="flex flex-col items-start justify-start w-full gap-[13px]">
-                  <Heading
-                    size="5xl"
-                    as="h4"
-                    className="tracking-[-0.92px] text-[46px] font-extrabold"
-                  >
-                    25K+
-                  </Heading>
-
-                  <Heading
-                    size="lg"
-                    as="h5"
-                    className="!text-blue_gray-600 tracking-[-0.40px] text-xl font-semibold leading-[140%]"
-                  >
-                    Properties for Buy & sell Successfully
-                  </Heading>
-                </div>
-              </div>
-
-              <div className="flex flex-col items-start justify-start w-[19%] md:w-full gap-[18px]">
-                <Button
-                  color="white_A700"
-                  size="3xl"
-                  shape="circle"
-                  className="w-[60px]"
-                >
-                  <Img src="../../../public/image/img_icon.svg" />
-                </Button>
-                <div className="flex flex-col items-start justify-start w-full gap-[13px]">
-                  <Heading
-                    size="5xl"
-                    as="h6"
-                    className="tracking-[-0.92px] text-[46px] font-extrabold"
-                  >
-                    500
-                  </Heading>
-                  <Heading
-                    size="lg"
-                    as="h5"
-                    className="!text-blue_gray-600 tracking-[-0.40px] text-xl font-semibold leading-[140%]"
-                  >
-                    <>
-                      Daily completed <br />
-                      transactions
-                    </>
-                  </Heading>
-                </div>
-              </div>
-              <div className="flex flex-col items-start justify-start w-[19%] md:w-full mb-[26px] gap-[18px]">
-                <Button
-                  color="white_A700"
-                  size="3xl"
-                  shape="circle"
-                  className="w-[60px]"
-                >
-                  <Img src="../../../public/image/img_icon_orange_a700.svg" />
-                </Button>
-                <div className="flex flex-col items-start justify-start w-full gap-4">
-                  <Heading
-                    size="5xl"
-                    as="h1"
-                    className="tracking-[-0.92px] text-[46px] font-extrabold"
-                  >
-                    600+
-                  </Heading>
-                  <Heading
-                    size="lg"
-                    as="h5"
-                    className="!text-blue_gray-600 tracking-[-0.40px] text-xl font-semibold"
-                  >
-                    Reagular Clients
-                  </Heading>
-                </div>
-              </div>
-            </div>
-          </div>
+          <SummaryOfClient />
         </div>
         {/* TRANSACTION COUNT START END */}
 
@@ -299,8 +190,8 @@ export default function AboutPage() {
               </div>
             </div>
             <Img
-              src="../../../public/image/img_rectangle_20_589x531.png"
-              alt="image_four"
+              src={ractangle5image}
+              alt="image_five"
               className="w-[47%] md:w-full md:h-[589px] object-cover rounded-[10px]"
             />
           </div>
@@ -311,8 +202,8 @@ export default function AboutPage() {
         <div className="flex flex-row justify-end w-full pl-14 pr-[120px] md:px-5">
           <div className="flex flex-row md:flex-col justify-between items-center w-full mx-auto md:gap-2 max-w-[1150px]">
             <Img
-              src="../../../image/img_rectangle_20_589x496.png"
-              alt="image_five"
+              src={ractangle6image}
+              alt="image_six"
               className="w-[40%] md:w-full md:h-[489px] object-cover rounded-[10px]"
             />
 
