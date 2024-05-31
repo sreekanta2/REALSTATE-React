@@ -12,7 +12,8 @@ import { Button, Heading, Img, Input, Text } from "../../components";
 import CheckBox from "../../components/Checkbox";
 import { GoogleMap } from "../../components/GoogleMap";
 import LandingPageCard from "../../components/LandingPageCard";
-import { RatingBar } from "../../components/RatingBar";
+
+import RatingComponent from "../../components/Rating";
 import { TextArea } from "../../components/TextArea";
 import ThumbSlider from "../../components/ThumbSlider";
 import {
@@ -29,6 +30,9 @@ import {
 export default function PropertyDetails() {
   const [open, setOpen] = useState(false);
   const lists = [1, 2, 3, 4];
+  const handleRatingChange = (newRating: number) => {
+    console.log(`New Rating: ${newRating}`);
+  };
   return (
     <div className="bg-[#f5f7fb] w-full ">
       <div className="  max-w-[1200px] mx-auto grid sm:grid-cols-1 md:grid-cols-2  grid-cols-3 gap-6 mt-14 ">
@@ -209,11 +213,7 @@ export default function PropertyDetails() {
                     Education Mandarin
                     <span className="text-sm font-normal"> (15.61 miles)</span>
                   </p>
-                  <RatingBar
-                    value={3}
-                    size={16}
-                    className="flex justify-between"
-                  />
+                  <RatingComponent initialRating={2} />
                 </div>
               ))}
             </div>
@@ -236,11 +236,7 @@ export default function PropertyDetails() {
                     Education Mandarin
                     <span className="text-sm font-normal"> (15.61 miles)</span>
                   </p>
-                  <RatingBar
-                    value={3}
-                    size={16}
-                    className="flex justify-between"
-                  />
+                  <RatingComponent initialRating={2} />
                 </div>
               ))}
             </div>
@@ -263,11 +259,7 @@ export default function PropertyDetails() {
                     Education Mandarin
                     <span className="text-sm font-normal"> (15.61 miles)</span>
                   </p>
-                  <RatingBar
-                    value={3}
-                    size={16}
-                    className="flex justify-between"
-                  />
+                  <RatingComponent initialRating={2} />
                 </div>
               ))}
             </div>
@@ -381,12 +373,7 @@ export default function PropertyDetails() {
                           </Heading>
                         </div>
                       </div>
-                      <RatingBar
-                        value={3}
-                        size={24}
-                        starCount={4}
-                        className="flex justify-between"
-                      />{" "}
+                      <RatingComponent initialRating={2} />
                     </div>
                     <div className="ml-20">
                       <Heading
@@ -431,12 +418,10 @@ export default function PropertyDetails() {
               <div className="flex justify-between">
                 <div>
                   <p>Your rating for this listing</p>
-                  <RatingBar
-                    value={1}
-                    size={24}
+                  <RatingComponent
+                    initialRating={0}
+                    onRatingChange={handleRatingChange}
                     isEditable={true}
-                    starCount={4}
-                    className="flex justify-between"
                   />
                 </div>
                 <div className="flex  flex-col gap-4  ">

@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 import image1 from "../../../public/image/img_rectangle_5615.png";
 import { CloseSVG } from "../../assets/images";
 import { Button, Heading, Img, Input } from "../../components";
-import { RatingBar } from "../../components/RatingBar";
+
+import RatingComponent from "../../components/Rating";
 import { SelectBox } from "../../components/SelectBox";
 import {
   dropDownOptions,
@@ -55,6 +56,7 @@ export default function AgentList() {
   };
 
   const selectedValuesArray = Object.values(selectedValues);
+
   return (
     <div className="flex flex-col items-center justify-start w-full gap-14 py-10">
       <div className="flex flex-row justify-center w-full">
@@ -187,12 +189,7 @@ export default function AgentList() {
                     Bruno Fernandes
                   </Heading>
                   <div className="flex flex-row justify-start items-center gap-3.5 ру-0.5">
-                    <RatingBar
-                      value={1}
-                      isEditable={true}
-                      size={16}
-                      className="flex justify-between"
-                    />
+                    <RatingComponent initialRating={4} />
                     <Heading as="h3" className="text-base font-semibold">
                       4.5 review
                     </Heading>

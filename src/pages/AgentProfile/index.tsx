@@ -6,7 +6,8 @@ import image2 from "../../../public/image/img_image_1.png";
 import rantangleImage from "../../../public/image/img_rectangle_5599_150x150.png";
 import { Button, Heading, Img, Text } from "../../components";
 import LandingPageCard from "../../components/LandingPageCard";
-import { RatingBar } from "../../components/RatingBar";
+
+import RatingComponent from "../../components/Rating";
 import {
   emailImage,
   facebookImage,
@@ -20,6 +21,7 @@ import {
 } from "../../importImages";
 export default function AgentProfile() {
   const reviews = [1, 2, 3, 4, 5];
+
   return (
     <div className="flex flex-col items-center justify-start w-full gap-[100px] overflow-auto bg-gray-50_01 py-14">
       <div className="flex flex-col items-center justify-start w-full ">
@@ -50,12 +52,7 @@ export default function AgentProfile() {
                         Bruno Fernandes
                       </Heading>
                       <div className="flex flex-row justify-start items-center gap-3.5 py-0.5">
-                        <RatingBar
-                          value={1}
-                          isEditable={true}
-                          size={16}
-                          className="flex justify-between"
-                        />
+                        <RatingComponent initialRating={2} />
                         <Heading as="h2" className="text-base font-semibold">
                           4.5 review
                         </Heading>
@@ -247,12 +244,6 @@ export default function AgentProfile() {
                     Bruno Fernandes
                   </Heading>
                   <div className="flex flex-row justify-start items-center gap-3.5 py-0.5">
-                    <RatingBar
-                      value={1}
-                      isEditable={true}
-                      size={16}
-                      className="flex justify-between"
-                    />
                     <Heading as="h3" className="text-base font-semibold">
                       4.5 review
                     </Heading>
@@ -480,13 +471,8 @@ export default function AgentProfile() {
                   <div className="flex flex-col items-center justify-start w-full mb-[9px] gap-6">
                     <div className="flex flex-row justify-start w-full gap-[50px]">
                       <div className="flex flex-row justify-start items-center w-[23%] gap-2.5">
-                        <RatingBar
-                          value={1}
-                          isEditable={true}
-                          size={24}
-                          starCount={4}
-                          className="flex justify-between"
-                        />{" "}
+                        <RatingComponent initialRating={2} />
+
                         <Heading
                           size="lg"
                           as="h3"
