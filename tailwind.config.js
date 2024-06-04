@@ -35,5 +35,5 @@ module.exports = {
       fontFamily: { manrope: "Manrope", markoone: "Marko One" },
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 };

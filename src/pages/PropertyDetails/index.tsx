@@ -11,7 +11,7 @@ import rosterImage from "../../../public/image/roadster-line.svg";
 import { Button, Heading, Img, Input, Text } from "../../components";
 import CheckBox from "../../components/Checkbox";
 import { GoogleMap } from "../../components/GoogleMap";
-import LandingPageCard from "../../components/LandingPageCard";
+import LandingPageCard from "../../components/PropertyCard";
 
 import RatingComponent from "../../components/Rating";
 import { TextArea } from "../../components/TextArea";
@@ -34,8 +34,8 @@ export default function PropertyDetails() {
     console.log(`New Rating: ${newRating}`);
   };
   return (
-    <div className="bg-[#f5f7fb] w-full ">
-      <div className="  max-w-[1200px] mx-auto grid sm:grid-cols-1 md:grid-cols-2  grid-cols-3 gap-6 mt-14 ">
+    <div className="bg-[#f5f7fb] w-screen flex flex-col gap-10   ">
+      <div className="  max-w-[1200px] mx-auto grid sm:grid-cols-1 md:grid-cols-2  grid-cols-3 gap-6 mt-14 pt-4 ">
         <div className="col-span-2 md:mx-4 flex flex-col gap-14 ">
           <div className="flex justify-between items-center px-6">
             <div className="flex flex-col  gap-2">
@@ -637,7 +637,7 @@ export default function PropertyDetails() {
           </div>
         </div>
       </div>
-      <div className="  max-w-[1200px] mx-auto md:mx-4  my-4 ">
+      <div className="  max-w-[1200px] mx-auto md:mx-4   mb-10 ">
         <div className="flex flex-row sm:flex-col justify-between items-start w-full sm:gap-10">
           <Heading
             size="md"

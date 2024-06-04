@@ -1,6 +1,8 @@
+import { motion } from "framer-motion";
 import image1 from "../../../public/image/img_image_350x384.png";
 import image2 from "../../../public/image/img_image_6.png";
 import image3 from "../../../public/image/img_image_7.png";
+import { fadeIn } from "../../framer_motion/variant";
 import { rightArrowOrange } from "../../importImages";
 import { Button } from "../Button";
 import { Heading } from "../Heading";
@@ -12,7 +14,13 @@ export default function NewsAndConsult() {
   return (
     <div className="flex flex-row justify-center w-full px-14 py-[120px] md:p-5 bg-gray-900">
       <div className="flex flex-col items-center justify-start w-full gap-[118px] max-w-[1200px]">
-        <div className="flex flex-col items-center justify-start w-full gap-[60px]">
+        <motion.div
+          variants={fadeIn("up", 0.02)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false }}
+          className="flex flex-col items-center justify-start w-full gap-[60px]"
+        >
           <div className="flex flex-row sm:flex-col justify-between items-center w-full sm:gap-10">
             <Heading
               size="4xl"
@@ -126,8 +134,14 @@ export default function NewsAndConsult() {
               </div>
             </div>
           </div>
-        </div>
-        <div className="flex flex-col items-center justify-start w-full gap-[30px] p-10 sm:p-5 bg-gray-400_01 rounded-[10px]">
+        </motion.div>
+        <motion.div
+          variants={fadeIn("up", 0.02)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false }}
+          className="flex flex-col items-center justify-start w-full gap-[30px] p-10 sm:p-5 bg-gray-400_01 rounded-[10px]"
+        >
           <div className="flex flex-col items-center justify-start w-[54%] md:w-full pt-[3px] gap-[5px]">
             <Heading
               size="3xl"
@@ -161,7 +175,7 @@ export default function NewsAndConsult() {
               Subscribe
             </Button>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

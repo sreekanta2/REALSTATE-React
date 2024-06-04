@@ -5,7 +5,7 @@ import { closeImage } from "../../importImages";
 export default function Otp() {
   return (
     <div>
-      <div className="flex flex-col items-center justify-center w-full p-[29px] sm:p-5 border-blue_gray-100_01 border border-solid bg-white-A708 rounded-[18px]">
+      <div className="flex flex-col items-center justify-center w-full p-[29px] sm:p-5 border-blue_gray-100_01 border border-solid bg-white-A708 rounded-[18px] mt-40">
         <div className="flex flex-col items-center justify-start w-full mt-2.5 mb-[7px] gap-[31px]">
           <div className="flex flex-row justify-center w-full">
             <div className="flex flex-col items-start justify-start w-full gap-6">

@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import { Button, Heading, Img, Input, Text } from "../../components";
-import { closeImage, eyeHideImage, lockImage } from "../../importImages";
+import { eyeHideImage, lockImage } from "../../importImages";
 
 export default function NewPassword() {
   return (
     <div>
-      <div className="flex flex-col items-center justify-center w-full p-[29px] sm:p-5 border-blue_gray-106_01 border border-solid bg-white-A700 rounded-[10px]">
+      <div className="flex flex-col items-center justify-center w-full p-[29px] sm:p-5 border-blue_gray-106_01 border border-solid bg-white-A700 rounded-[10px] mt-40">
         <div className="flex flex-col items-center justify-start w-full mt-2.5 mb-[7px] gap-[31px]">
           <div className="flex flex-row justify-center w-full">
             <div className="flex flex-col items-center justify-start w-full gap-6">
@@ -19,7 +19,7 @@ export default function NewPassword() {
                     New Password
                   </Heading>
                   <Button size="sm" shape="square" className="w-[30px]">
-                    <Img src={closeImage} />
+                    <Img src={lockImage} />
                   </Button>
                 </div>
                 <Text as="p" className="Itext-gray-900 text-lg font-normal">

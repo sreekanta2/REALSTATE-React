@@ -4,7 +4,7 @@ import { useState } from "react";
 import { CloseSVG } from "../../assets/images";
 import { Button, Heading, Img, Input } from "../../components";
 import { GoogleMap } from "../../components/GoogleMap";
-import LandingPageCard from "../../components/LandingPageCard";
+import LandingPageCard from "../../components/PropertyCard";
 import { SelectBox } from "../../components/SelectBox";
 import {
   dropDownOptions,

@@ -13,7 +13,7 @@ export default function FAQ() {
     setSearchText(event.target.value);
   };
   return (
-    <div className="flex flex-row justify-center w-full bg-[#fff9f6]">
+    <div className="flex flex-row justify-center w-full bg-[#fff9f6] mt-20">
       <div className="flex flex-row justify-center w-full">
         <div className="flex flex-col items-center justify-start w-full pt-[7px] gap-[33px] md:px-5 max-w-[1200px]">
           <Heading

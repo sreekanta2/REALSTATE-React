@@ -22,7 +22,7 @@ export default function Header({ ...props }: Props) {
   };
   return (
     <header {...props}>
-      <div className="flex flex-row md:flex-col  justify-between items-center w-full mx-auto md:gap-10 sm:px-5 md:px-0 max-w-[1200px]">
+      <div className="flex flex-row md:flex-col  justify-between items-center w-full mx-auto md:gap-10 sm:px-5 md:px-0 max-w-[1200px] ">
         {/* logo */}
 
         <Link
@@ -34,7 +34,7 @@ export default function Header({ ...props }: Props) {
           <Text
             size="lg"
             as="p"
-            className="mt-[5px] !text-orage-A700 !font-markoone text-xl font-normal"
+            className="mt-[5px] !text-orange-A700 !font-markoone text-xl font-normal"
           >
             Relasto
           </Text>
@@ -83,7 +83,7 @@ export default function Header({ ...props }: Props) {
         {/* login */}
         <div className="flex flex-row justify-center items-center   md:w-full gap-2.5">
           <Input
-            size="xs"
+            size="sm"
             shape="square"
             type="text"
             name="search"
@@ -107,7 +107,7 @@ export default function Header({ ...props }: Props) {
                 />
               ) : null
             }
-            className="w-[55%] gap-2 text-gray-908 font-bold"
+            className="w-[55%] gap-2 text-gray-908 font-bold rounded-xl"
           />
           <Link to="/login">
             <Button

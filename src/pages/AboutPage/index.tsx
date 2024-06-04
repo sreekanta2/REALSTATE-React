@@ -12,7 +12,7 @@ import TeamCard from "../../components/TeamCard";
 export default function AboutPage() {
   return (
     <>
-      <div className="flex flex-col items-center justify-start w-full gap-[100px] mt-[60px]">
+      <div className="flex flex-col items-center justify-start w-full gap-[100px]  relative   ">
         {/* banner start */}
         <div className="flex flex-row justify-center w-full">
           <div className="flex flex-col items-center justify-start w-full gap-[38px] md:px-5 max-w-[1200px]">

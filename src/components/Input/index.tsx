@@ -11,8 +11,8 @@ const variants = {
   },
 } as const;
 const sizes = {
-  sm: "h-[48px] px-4 pr-[35px] text-sm",
-  xs: "h-[25px] pr-[30px] text-lg",
+  sm: "h-[48px] px-2   text-sm ",
+  xs: "h-[25px]  px-4 text-lg",
   md: "h-[60px] px-4 text-lg",
 } as const;
 type InputProps = Omit<

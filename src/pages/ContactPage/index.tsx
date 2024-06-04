@@ -14,7 +14,7 @@ import {
 export default function ContactPagePage() {
   return (
     <>
-      <div className="flex flex-col items-center justify-start w-full gap-[100px] overflow-auto bg-gray-50_01 py-10">
+      <div className="flex flex-col items-center justify-start w-screen gap-[100px] overflow-auto bg-gray-50_01 py-10 relative">
         <div className="flex flex-col items-center justify-start w-full gap-[60px]">
           <div className="flex flex-row justify-center w-full">
             <div className="flex flex-col items-center justify-start w-full gap-11 md:px-5 max-w-[1200px]">

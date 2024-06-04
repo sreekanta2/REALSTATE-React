@@ -4,7 +4,6 @@ import { Button, Heading, Img, Input } from "../../components";
 import CheckBox from "../../components/Checkbox";
 import {
   eyeHideImage,
-  framerImage,
   googleImage,
   lockImage,
   userImage,
@@ -16,9 +15,8 @@ export default function Login() {
     setType(!type);
   };
   return (
-    <div className="flex flex-col items-center justify-center min-w-[480px] p-[29px] sm:p-5 border-blue_gray-100_01 border border-solid bg-white-A700 rounded-[10px]">
-      <div className="flex flex-col items-center justify-start w-full gap-[29px] my-[9px]">
-        {" "}
+    <div className="h-screen flex   justify-center  bg-gray-50 w-screen">
+      <div className="flex flex-col items-center justify-start w-96 bg-white-A700 p-4 border rounded-xl gap-[29px] my-[9px]">
         <div className="flex flex-col items-center justify-start w-full gap-[13px]">
           <div className="flex flex-row justify-center w-full pt-[5px]">
             <div className="flex flex-col items-center justify-start w-full gap-[15px]">
@@ -31,7 +29,7 @@ export default function Login() {
                   Log in
                 </Heading>
                 <Button size="sm" shape="square" className="w-[30px] mt-1">
-                  <Img src={framerImage} />
+                  <Img src={lockImage} />
                 </Button>
               </div>
               <Input

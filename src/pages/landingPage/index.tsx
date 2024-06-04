@@ -9,14 +9,16 @@ import image7 from "../../../public/image/img_rectangle_20_589x521.png";
 import image4 from "../../../public/image/img_rectangle_21.png";
 import ractangleImage from "../../../public/image/img_rectangle_5591.png";
 
+import { motion } from "framer-motion";
 import statusSearchImage from "../../../public/image/img_search_status.svg";
 import walletImage from "../../../public/image/img_wallet.svg";
 import { Button, Heading, Text } from "../../components";
 import { Img } from "../../components/Img";
-import LandingPageCard from "../../components/LandingPageCard";
 import NewsAndConsult from "../../components/NewsAndConsult";
+import LandingPageCard from "../../components/PropertyCard";
 import SearchBar from "../../components/SearchBar";
 import SummaryOfClient from "../../components/SummarayOfClinet";
+import { fadeIn } from "../../framer_motion/variant";
 import {
   checkImage,
   leftArrowImage,
@@ -24,14 +26,21 @@ import {
   shapeImage,
 } from "../../importImages";
 export default function LandingPage() {
+  const lists = [1, 2, 3, 4, 5, 6];
   return (
-    <div className="flex flex-col gap-14">
+    <div className="flex flex-col gap-14  ">
       {/* banner start */}
 
       <div className="flex flex-row justify-end w-full py-[80px] md:my-5 bg-yellow-50">
         <div className=" grid   grid-cols-2 md:grid-cols-1 max-w-[1300px] ">
-          <div className="flex flex-col    items-center mx-auto md:px-6 w-full lg:w-full  gap-10">
-            <div className="flex flex-col items-center justify-center w-full gap-[15px]">
+          <div className="flex flex-col    items-center   md:px-6 w-full lg:w-full  gap-10">
+            <motion.div
+              variants={fadeIn("right", 0.2)}
+              initial="hidden"
+              whileInView={"show"}
+              viewport={{ once: true }}
+              className="flex flex-col items-center justify-center   gap-[15px]"
+            >
               <Heading
                 size="5xl"
                 as="h1"
@@ -51,16 +60,22 @@ export default function LandingPage() {
                 We helps businesses customize, automate and scale up their ad
                 PROPERTIESion and delivery.
               </Text>
-            </div>
+            </motion.div>
             <SearchBar />
           </div>
-          <div className="flex flex-row justify-end">
+          <motion.div
+            variants={fadeIn("left", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true }}
+            className="flex flex-row justify-end"
+          >
             <Img
               src={image}
               alt="image_one"
               className="w-[89%] md:h-auto sm:w-full object-cover"
             />
-          </div>
+          </motion.div>
         </div>
       </div>
 
@@ -68,7 +83,13 @@ export default function LandingPage() {
       {/* getStart start */}
       <div className="flex flex-row justify-center w-full ">
         <div className="grid grid-cols-2 md:grid-cols-1 lg:grid-cols-2 justify-center w-full gap-6 md:gap-5 md:px-5 max-w-[1200px]">
-          <div className="flex flex-col items-start justify-center   md:h-auto gap-[49px] p-[50px] md:p-5 bg-red-100 rounded-[20px]">
+          <motion.div
+            variants={fadeIn("right", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true }}
+            className="flex flex-col items-start justify-center   md:h-auto gap-[49px] p-[50px] md:p-5 bg-red-100 rounded-[20px]"
+          >
             <div className="flex flex-col items-center justify-start mt-[23px] gap-[15px]">
               <Heading
                 size="4xl"
@@ -91,8 +112,14 @@ export default function LandingPage() {
             >
               Get Started
             </Button>
-          </div>
-          <div className=" md:w-full gap-6 grid-cols-2 sm:grid-cols-1 sm:gap-5 grid">
+          </motion.div>
+          <motion.div
+            variants={fadeIn("left", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true }}
+            className=" md:w-full gap-6 grid-cols-2 sm:grid-cols-1 sm:gap-5 grid"
+          >
             <div className="flex flex-col items-start justify-center w-full md:h-auto gap-5 p-[30px] sm:p-5 bg-deep_orange-50 rounded-[20px]">
               <Img
                 src={statusSearchImage}
@@ -161,18 +188,30 @@ export default function LandingPage() {
                 </>
               </Heading>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
 
       {/* getStart end */}
       {/* TRANSACTION COUNT START */}
-      <div className="flex flex-row justify-center w-full p-[50px] md:p-5 bg-gray-50  ">
+      <motion.div
+        variants={fadeIn("up", 0.02)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: true }}
+        className="flex flex-row justify-center w-full p-[50px] md:p-5 bg-gray-50  "
+      >
         <SummaryOfClient />
-      </div>
+      </motion.div>
       {/* TRANSACTION COUNT START END */}
       {/* FEATURE PROPERTIES START   */}
-      <div className="flex flex-row justify-center w-full">
+      <motion.div
+        variants={fadeIn("up", 0.02)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: true }}
+        className="flex flex-row justify-center w-full"
+      >
         <div className="flex flex-col items-center justify-start   w-full md:h-auto gap-[53px] md:px-5 max-w-[1200px]">
           <div className="flex flex-row justify-center w-full pt-[5px]">
             <div className="flex flex-col items-center justify-start w-full gap-14">
@@ -233,35 +272,16 @@ export default function LandingPage() {
           </div>
 
           <div className=" grid justify-center w-full gap-6 grid-cols-3 md:grid-cols-2 md:gap-5 sm:grid-cols-1 ">
-            <LandingPageCard
-              imageOne={image2}
-              className="bg-white-A700 border rounded-[10px] p-4"
-            />
-            <LandingPageCard
-              imageOne={image2}
-              className="bg-white-A700 border rounded-[10px] p-4"
-            />
-
-            <LandingPageCard
-              imageOne={image2}
-              className="bg-white-A700 border rounded-[10px] p-4"
-            />
-
-            <LandingPageCard
-              imageOne={image2}
-              className="bg-white-A700 border rounded-[10px] p-4"
-            />
-            <LandingPageCard
-              imageOne={image2}
-              className="bg-white-A700 border rounded-[10px] p-4"
-            />
-            <LandingPageCard
-              imageOne={image2}
-              className="bg-white-A700 border rounded-[10px] p-4"
-            />
+            {lists.map((list) => (
+              <LandingPageCard
+                key={list}
+                imageOne={image2}
+                className="bg-gradient-to-br from-slate-100 to-gray-100 border rounded-[10px] p-4 "
+              />
+            ))}
           </div>
         </div>
-      </div>
+      </motion.div>
 
       {/* FEATURE PROPERTIES   END */}
       {/* DREAM APPOINTMENT START   */}
@@ -270,7 +290,13 @@ export default function LandingPage() {
           {" "}
           <div className="flex flex-row md:flex-col justify-between items-center w-full md:gap-10">
             <div className="flex flex-col items-start justify-start w-[47%] md:w-full gap-[58px]">
-              <div className="flex flex-col items-center justify-start gap-[19px]">
+              <motion.div
+                variants={fadeIn("right", 0.02)}
+                initial="hidden"
+                whileInView={"show"}
+                viewport={{ once: true }}
+                className="flex flex-col items-center justify-start gap-[19px]"
+              >
                 <Heading
                   size="4xl"
                   as="h2"
@@ -287,7 +313,7 @@ export default function LandingPage() {
                   is untrammelled and when nothing prevents our being able to do
                   what we like best, every pleasure is to be welcomed.
                 </Text>
-              </div>
+              </motion.div>
               <Button
                 shape="round"
                 className="sm:px-5 font-semibold min-w-[138px] sm:min-w-full"
@@ -295,7 +321,13 @@ export default function LandingPage() {
                 Get Started
               </Button>
             </div>
-            <div className="flex flex-row sm:flex-col justify-start w-[47%] md:w-full gap-5 sm:gap-5">
+            <motion.div
+              variants={fadeIn("left", 0.02)}
+              initial="hidden"
+              whileInView={"show"}
+              viewport={{ once: true }}
+              className="flex flex-row sm:flex-col justify-start w-[47%] md:w-full gap-5 sm:gap-5"
+            >
               <div className="flex flex-col items-center justify-start w- [49%] sm:w-full gap-4">
                 <Img
                   src={image3}
@@ -320,15 +352,25 @@ export default function LandingPage() {
                   className="w-full md:h-auto sm:w-full object-cover rounded-[10px]"
                 />
               </div>
-            </div>
+            </motion.div>
           </div>
           <div className="flex flex-row md:flex-col justify-between items-center w-full md:gap-10">
-            <Img
-              src={image7}
-              alt="image_six"
+            <motion.div
+              variants={fadeIn("right", 0.02)}
+              initial="hidden"
+              whileInView={"show"}
+              viewport={{ once: true }}
               className="w-[44%] md:w-full md:h- [589px] object-cover rounded-[10px]"
-            />
-            <div className="flex flex-col items-start justify-start w-[44%] md:w-full gap-[60px]">
+            >
+              <Img src={image7} alt="image_six" />
+            </motion.div>
+            <motion.div
+              variants={fadeIn("left", 0.02)}
+              initial="hidden"
+              whileInView={"show"}
+              viewport={{ once: true }}
+              className="flex flex-col items-start justify-start w-[44%] md:w-full gap-[60px]"
+            >
               {" "}
               <div className="flex flex-col items-center justify-start w-full gap-[18px]">
                 <div className="flex flex-col items-center justify-start w-full gap-[19px]">
@@ -399,13 +441,19 @@ export default function LandingPage() {
               >
                 Learn more
               </Button>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
       {/* dream Appointment End */}
       {/* Review start */}
-      <div className="flex flex-col items-center justify-center w-full gap-6  ">
+      <motion.div
+        variants={fadeIn("up", 0.2)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: true }}
+        className="flex flex-col items-center justify-center w-full gap-6  "
+      >
         <div className="flex flex-row justify-center w-full">
           <div className="flex flex-row justify-center w-full md:px-5 max-w-[1010px]">
             <div className="flex flex-row md:flex-col justify-between w-full md:gap-10">
@@ -484,7 +532,7 @@ export default function LandingPage() {
             />
           </div>
         </div>
-      </div>
+      </motion.div>
       {/* Review end */}
       {/* News & Consult start*/}
       <NewsAndConsult />

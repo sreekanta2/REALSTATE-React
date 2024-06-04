@@ -5,7 +5,7 @@ import image1 from "../../../public/image/img_ellipse_2695.png";
 import image2 from "../../../public/image/img_image_1.png";
 import rantangleImage from "../../../public/image/img_rectangle_5599_150x150.png";
 import { Button, Heading, Img, Text } from "../../components";
-import LandingPageCard from "../../components/LandingPageCard";
+import LandingPageCard from "../../components/PropertyCard";
 
 import RatingComponent from "../../components/Rating";
 import {
@@ -23,7 +23,7 @@ export default function AgentProfile() {
   const reviews = [1, 2, 3, 4, 5];
 
   return (
-    <div className="flex flex-col items-center justify-start w-full gap-[100px] overflow-auto bg-gray-50_01 py-14">
+    <div className="flex flex-col items-center justify-start w-full gap-[100px] overflow-auto bg-gray-50_01 py-14 mt-8">
       <div className="flex flex-col items-center justify-start w-full ">
         <div className="flex flex-col items-center justify-start w-full">
           <div className="flex flex-col items-center justify-start w-full">

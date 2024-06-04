@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import Footer from "../components/Footer";
-import Header from "../components/Header";
+import Header2 from "../components/Header2";
 interface LayoutProps {
   children: ReactNode;
 }
@@ -13,9 +13,9 @@ export default function Layout({ children }: LayoutProps) {
         <title>Srikanto</title>
         <meta name="srikanto" content="this the hotel management system" />
       </Helmet>
-      <div className="flex flex-col items-center justify-start w-full bg-white-A700  ">
-        <Header className="flex justify-center items-center w-full md:h-auto p-[19px]   " />
-        {children}
+      <div className=" bg-white-A700  ">
+        <Header2 />
+        <main className=" ">{children}</main>
         <Footer />
       </div>
     </HelmetProvider>

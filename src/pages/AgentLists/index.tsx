@@ -58,7 +58,7 @@ export default function AgentList() {
   const selectedValuesArray = Object.values(selectedValues);
 
   return (
-    <div className="flex flex-col items-center justify-start w-full gap-14 py-10">
+    <div className="flex flex-col items-center justify-start w-full gap-14 py-10 relative">
       <div className="flex flex-row justify-center w-full">
         <div className="flex flex-col items-start justify-start w-full pt-[5px] gap-[18px] md:px-5 max-w-[1200px]">
           <Heading

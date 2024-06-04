@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import { Button, Heading, Img, Input, Text } from "../../components";
-import { closeImage, emailImage } from "../../importImages";
+import { emailImage, lockImage } from "../../importImages";
 
 export default function ResetPassword() {
   return (
-    <div className="flex flex-col items-center justify-center w-full p-[29px] sm:p-5 border-blue_gray-108_01 border border-solid bg-white-A700 rounded-[18px] max-w-[480px]">
-      <div className="flex flex-col items-center justify-start w-full gap-[31px] my-[9px]">
+    <div className="h-screen flex   justify-center  bg-gray-50 w-screen">
+      <div className="flex flex-col items-center justify-start w-96 bg-white-A700 p-4 border rounded-xl gap-[29px] my-[9px]">
         <div className="flex flex-row justify-center w-full">
           <div className="flex flex-col items-center justify-start w-full gap-[22px]">
             <div className="flex flex-col items-center justify-start w-full gap-2">
@@ -18,7 +18,7 @@ export default function ResetPassword() {
                   Reset Password
                 </Heading>
                 <Button size="sm" shape="square" className="w- [38px]">
-                  <Img src={closeImage} />
+                  <Img src={lockImage} />
                 </Button>
               </div>
               <Text

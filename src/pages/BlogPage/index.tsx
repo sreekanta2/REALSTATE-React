@@ -53,7 +53,10 @@ export default function BlogPage() {
   const list = [1, 2, 3, 4];
   return (
     <>
-      <div className="flex flex-col items-center justify-start w-full overflow-auto bg-gray-50_01 pt-10">
+      <div
+        className="flex flex-col items-center justify-start w-screen overflow-auto bg-gray-50_01 pt-10 
+      "
+      >
         <div className="flex flex-col items-center justify-start w-full gap-[68px]">
           <div className="flex flex-col items-center justify-start w-full">
             <div className="flex flex-col items-center justify-start w-full gap-[58px] md:px-5 max-w-[1200px]">
